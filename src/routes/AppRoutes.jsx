@@ -10,7 +10,7 @@ import Services from "../pages/Services.jsx";
 
 function AppRoutes() {
   return (
-    <div className="min-h-screen font-body">
+    <div className="min-h-screen font-body overflow-x-hidden">
       <Header />
       <Routes>
         <Route index path="/" element={<Home />} />

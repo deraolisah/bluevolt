@@ -1,38 +1,41 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navItems = [
+    { label: 'Home', href: '/' },
     { label: 'About Us', href: '/about' },
     { label: 'Contact Us', href: '/contact' },
     { label: 'Services', href: '/services' },
-    // { label: 'Why Choose Us', href: '#why-choose-us' },
-    // { label: 'Process', href: '#process' },
-    // { label: 'Vessel Brokerage', href: '#vessel-brokerage' },
   ]
 
   return (
-    <header className="sticky top-0 z-50 bg-navy-700 text-white shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <Link to="/" className="text-xl font-display font-bold tracking-tight">
+    <header className="fixed w-full top-0 z-50 bg-navy-700/80 text-white backdrop-blur-sm border-b border-px border-navy-50/30">
+      <div className="container py-0">
+        <div className="flex justify-between items-center h-16 md:h-18">
+          <Link to="/" onClick={() => {scrollTo(0,0) }} className="text-xl tracking-tight">
             Bluevolt Marine
           </Link>
 
           <nav className="hidden md:block">
             <div className="flex items-baseline space-x-4">
               {navItems.map((item) => (
-                <Link
+                <NavLink
                   key={item.label}
                   to={item.href}
-                  className="text-navy-100 hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-200"
+                  end
+                  className={({ isActive }) =>
+                    `px-2 py-2 text-sm transition-colors duration-200 ${
+                      isActive ? "text-white font-medium" : "text-navy-300 hover:text-white"
+                    }`
+                  }
                 >
                   {item.label}
-                </Link>
+                </NavLink>
               ))}
-              <button className="btn-primary text-sm">
+              <button className="btn-secondary text-sm">
                 Request Survey
               </button>
             </div>
@@ -41,7 +44,7 @@ export default function Header() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-navy-100 hover:text-white focus:outline-none cursor-pointer"
+              className="inline-flex items-center justify-center p-px rounded-md text-white hover:text-white focus:outline-none cursor-pointer"
             >
               <span className="sr-only">Open main menu</span>
               <svg
@@ -54,14 +57,14 @@ export default function Header() {
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth={2}
+                    strokeWidth={1}
                     d="M6 18L18 6M6 6l12 12"
                   />
                 ) : (
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth={2}
+                    strokeWidth={1}
                     d="M4 6h16M4 12h16M4 18h16"
                   />
                 )}
@@ -72,19 +75,24 @@ export default function Header() {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden bg-navy-700">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="md:hidden bg-navy-700/0">
+          <div className="px-4 pt-2 pb-6 space-y-1 sm:px-3">
             {navItems.map((item) => (
-              <a
+              <NavLink
                 key={item.label}
-                href={item.href}
-                className="text-navy-100 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                to={item.href}
+                end
+                className={({ isActive }) =>
+                  `block px-0 py-2 rounded-md text-base ${
+                    isActive ? "text-white font-medium" : "text-navy-100 hover:text-white"
+                  }`
+                }
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
-              </a>
+              </NavLink>
             ))}
-            <button className="btn-primary w-full mt-4">
+            <button className="btn-secondary w-full mt-4">
               Request Survey
             </button>
           </div>

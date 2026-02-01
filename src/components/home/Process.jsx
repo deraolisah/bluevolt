@@ -23,13 +23,13 @@ export default function Process() {
   ]
 
   return (
-    <section id="process" className="bg-white">
+    <section id="process" className="bg-navy-800 text-white">
       <div className="section-container">
         <div className="text-center mb-16">
-          <h2 className="section-title">How It Works</h2>
-          <p className="section-subtitle">
+          <h2 className="section-title text-white"> Work Smarter, Not Harder <br/> with Bluevolt </h2>
+          {/* <p className="section-subtitle">
             A straightforward process designed for efficiency and technical rigor.
-          </p>
+          </p> */}
         </div>
         <div className="relative">
           <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-navy-200 -translate-y-1/2"></div>

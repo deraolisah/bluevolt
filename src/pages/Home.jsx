@@ -1,5 +1,5 @@
 import React from 'react'
-import UnderConstruction from '../components/UnderConstruction';
+// import UnderConstruction from '../components/UnderConstruction';
 import Hero from '../components/home/Hero';
 import TrustStrip from '../components/home/TrustStrip';
 import WhyChooseUs from '../components/home/WhyChooseUs';
@@ -12,12 +12,12 @@ import ContactForm from '../components/home/ContactForm';
 
 const Home = () => {
   return (
-    <section>
+    <section className='overflow-x-hidden'>
       <Hero />
       <TrustStrip />
+      <Process />
       <WhyChooseUs />
       <IndustriesServed />
-      <Process />
       <VesselBrokerage />
       <Testimonials />
       <CTASection />
