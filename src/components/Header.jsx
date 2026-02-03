@@ -7,13 +7,13 @@ export default function Header() {
   const navItems = [
     { label: 'Home', href: '/' },
     { label: 'About Us', href: '/about' },
-    { label: 'Contact Us', href: '/contact' },
     { label: 'Services', href: '/services' },
+    { label: 'Contact Us', href: '/contact' },
   ]
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-navy-700/80 text-white backdrop-blur-sm border-b border-px border-navy-50/30">
-      <div className="container py-0">
+    <header className="fixed w-full top-0 z-50 bg-white text-navy-700 backdrop-blur-sm border-b border-px border-navy-200/50">
+      <div className="container py-0!">
         <div className="flex justify-between items-center h-16 md:h-18">
           <Link to="/" onClick={() => {scrollTo(0,0) }} className="text-xl tracking-tight">
             Bluevolt Marine
@@ -28,7 +28,7 @@ export default function Header() {
                   end
                   className={({ isActive }) =>
                     `px-2 py-2 text-sm transition-colors duration-200 ${
-                      isActive ? "text-white font-medium" : "text-navy-300 hover:text-white"
+                      isActive ? "text-navy-700 font-medium" : "text-navy-500 hover:text-navy-700"
                     }`
                   }
                 >
@@ -44,7 +44,7 @@ export default function Header() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-px rounded-md text-white hover:text-white focus:outline-none cursor-pointer"
+              className="inline-flex items-center justify-center bg-navy-100 text-navy-700 p-1 rounded-full focus:outline-none cursor-pointer"
             >
               <span className="sr-only">Open main menu</span>
               <svg
@@ -75,7 +75,7 @@ export default function Header() {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden bg-navy-700/0">
+        <div className="md:hidden bg-white/0">
           <div className="px-4 pt-2 pb-6 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <NavLink
@@ -84,7 +84,7 @@ export default function Header() {
                 end
                 className={({ isActive }) =>
                   `block px-0 py-2 rounded-md text-base ${
-                    isActive ? "text-white font-medium" : "text-navy-100 hover:text-white"
+                    isActive ? "text-navy-700 font-medium" : "text-navy-500 hover:text-navy-700"
                   }`
                 }
                 onClick={() => setIsMenuOpen(false)}
@@ -93,7 +93,7 @@ export default function Header() {
               </NavLink>
             ))}
             <button className="btn-secondary w-full mt-4">
-              Request Survey
+              Request a Survey
             </button>
           </div>
         </div>

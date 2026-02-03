@@ -11,13 +11,13 @@ export default function IndustriesServed() {
   ]
 
   return (
-    <section className="bg-navy-800 text-white">
+    <section className="bg-white">
       <div className="container">
         <div className="text-center mb-6 md:mb-12">
-          <h2 className="section-title text-white">
+          <h2 className="section-title">
             Industries Served
           </h2>
-          <p className="text-navy-200 max-w-3xl mx-auto text-lg">
+          <p className="max-w-3xl mx-auto text-lg">
             We serve leading companies in the offshore and maritime sectors, providing technical assessments they can trust.
           </p>
         </div>
@@ -25,9 +25,9 @@ export default function IndustriesServed() {
           {industries.map((industry, index) => (
             <div 
               key={index} 
-              className="bg-navy-700/50 rounded-lg p-2 sm:p-6 text-center hover:bg-navy-700 transition-colors duration-200 border border-navy-600"
+              className="bg-navy-100/50 rounded-lg p-2 sm:p-6 text-center hover:bg-navy-100 transition-colors duration-200 border border-navy-200"
             >
-              <div className="font-medium text-navy-100">
+              <div className="font-medium">
                 {industry}
               </div>
             </div>

@@ -31,15 +31,15 @@ export default function VesselBrokerage() {
               href="#contact"
               className="btn-primary inline-flex items-center"
             >
-              <img 
+              {/* <img 
                 src="/icons/vessel.svg" 
                 alt="" 
                 className="w-5 h-5 mr-2"
-              />
+              /> */}
               Request Vessel Availability
             </a>
           </div>
-          <div className="bg-white rounded-lg shadow-lg p-8">
+          <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
             <h3 className="font-display font-semibold text-navy-800 text-xl mb-6">
               Vessel Types
             </h3>

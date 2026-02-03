@@ -19,7 +19,7 @@ export default function Testimonials() {
 
   return (
     <section className="bg-white">
-      <div className="section-container">
+      <div className="container">
         <div className="text-center mb-16">
           <h2 className="section-title">Professional Endorsements</h2>
           <p className="section-subtitle">

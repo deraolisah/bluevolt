@@ -23,15 +23,15 @@ export default function WhyChooseUs() {
   ]
 
   return (
-    <section id="why-choose-us" className="bg-navy-50">
-      <div className="section-container">
-        <div className="text-center mb-16">
+    <section id="why-choose-us" className="bg-navy-50 z-2 relative">
+      <div className="container">
+        <div className="text-center md:mb-16">
           <h2 className="section-title">Why Choose Our Services</h2>
           <p className="section-subtitle">
             We provide the operational insight that only comes from decades of actual offshore experience.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
           {features.map((feature, index) => (
             <div 
               key={index} 

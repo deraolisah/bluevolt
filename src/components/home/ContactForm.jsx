@@ -34,8 +34,8 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="contact" className="bg-white">
-      <div className="section-container">
+    <section id="contact" className="">
+      <div className="container">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="section-title">Request a Survey or Vessel</h2>
@@ -44,8 +44,8 @@ export default function ContactForm() {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="bg-navy-50 rounded-lg shadow-lg p-8">
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <form onSubmit={handleSubmit} className="bg-navy-50 rounded-lg shadow-lg p-6 md:p-8">
+            <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-8">
               <div>
                 <label htmlFor="companyName" className="block text-sm font-medium text-navy-700 mb-2">
                   Company Name *
@@ -57,7 +57,7 @@ export default function ContactForm() {
                   value={formData.companyName}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-navy-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-blue focus:border-transparent"
+                  className="w-full px-4 py-3 border border-navy-300 rounded-md focus:outline-none focus:ring focus:ring-navy-700 focus:border-transparent"
                 />
               </div>
 
@@ -72,7 +72,7 @@ export default function ContactForm() {
                   value={formData.contactPerson}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-navy-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-blue focus:border-transparent"
+                  className="w-full px-4 py-3 border border-navy-300 rounded-md focus:outline-none focus:ring focus:ring-navy-700 focus:border-transparent"
                 />
               </div>
 
@@ -87,7 +87,7 @@ export default function ContactForm() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-navy-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-blue focus:border-transparent"
+                  className="w-full px-4 py-3 border border-navy-300 rounded-md focus:outline-none focus:ring focus:ring-navy-700 focus:border-transparent"
                 />
               </div>
 
@@ -102,7 +102,7 @@ export default function ContactForm() {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-navy-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-blue focus:border-transparent"
+                  className="w-full px-4 py-3 border border-navy-300 rounded-md focus:outline-none focus:ring focus:ring-navy focus:border-transparent"
                 />
               </div>
 
@@ -116,7 +116,7 @@ export default function ContactForm() {
                   value={formData.serviceType}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-navy-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-blue focus:border-transparent"
+                  className="w-full px-4 py-3 border border-navy-300 rounded-md focus:outline-none focus:ring focus:ring-navy-700 focus:border-transparent"
                 >
                   <option value="">Select a service</option>
                   {serviceTypes.map((type, index) => (

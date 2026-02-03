@@ -12,7 +12,7 @@ import ContactForm from '../components/home/ContactForm';
 
 const Home = () => {
   return (
-    <section className='overflow-x-hidden'>
+    <>
       <Hero />
       <TrustStrip />
       <Process />
@@ -20,9 +20,9 @@ const Home = () => {
       <IndustriesServed />
       <VesselBrokerage />
       <Testimonials />
-      <CTASection />
+      {/* <CTASection /> */}
       <ContactForm />
-    </section>
+    </>
   )
 }
 

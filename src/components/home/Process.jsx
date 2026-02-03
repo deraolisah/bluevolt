@@ -1,3 +1,6 @@
+import processImg from "../../assets/process-bg.jpg";
+
+
 export default function Process() {
   const steps = [
     {
@@ -23,34 +26,90 @@ export default function Process() {
   ]
 
   return (
-    <section id="process" className="bg-navy-800 text-white">
-      <div className="section-container">
-        <div className="text-center mb-16">
-          <h2 className="section-title text-white"> Work Smarter, Not Harder <br/> with Bluevolt </h2>
-          {/* <p className="section-subtitle">
-            A straightforward process designed for efficiency and technical rigor.
-          </p> */}
+    <section id="process" className="bg-white">
+      <div className="container">
+        <div className="text-center z-4 relative">
+          <h2 className="section-title"> How it works with Bluevolt </h2>
         </div>
-        <div className="relative">
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-navy-200 -translate-y-1/2"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div className="relative mt-8">
+          {/* <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-navy-200/50 -translate-y-1/2"></div> */}
+          {/* <div className="absolute z-1 top-1/2 left-1/2 -translate-1/2 w-full aspect-square bg-radial from-navy-200/50 to-[#28206C]/0 to-60% pointer-events-none"></div> */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
             {steps.map((step, index) => (
               <div key={index} className="relative">
-                <div className="bg-white rounded-lg p-8 text-center z-10 relative card-hover border border-navy-200">
-                  <div className="w-16 h-16 bg-accent-blue text-white rounded-full flex items-center justify-center text-2xl font-bold font-display mx-auto mb-6">
-                    {step.number}
-                  </div>
-                  <h3 className="font-display font-semibold text-navy-800 text-xl mb-4">
+                <div className="bg-navy-50 rounded-xl min-h-68 p-8 text-center z-10 relative border border-navy-200 flex flex-col justify-between group overflow-hidden">
+                  <h3 className="font-display font-semibold text-start text-xl mb-4">
                     {step.title}
                   </h3>
-                  <p className="text-navy-600">
+                  <p className="text-navy-700 text-start w-full">
                     {step.description}
                   </p>
+
+                  <div className="absolute z-0 inset-0 opacity-10 transition-all duration-400 group-hover:opacity-15 group-hover:scale-110 pointer-events-none">
+                    <img
+                      src={processImg}
+                      width={380}
+                      height={362}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
+
+
+        {/* <div className="flex flex-wrap gap-10 mb-10">
+          {steps.map((item) => (
+            <div
+              className="block relative p-0.5 bg-no-repeat bg-size-[100%_100%] md:max-w-[24rem]"
+              style={{
+                backgroundImage: `url(${item.backgroundUrl})`,
+              }}
+              key={item.id}
+            >
+              <div className="relative z-2 flex flex-col min-h-88 p-[2.4rem] pointer-events-none">
+                <h5 className="h5 mb-5">{item.title}</h5>
+                <p className="body-2 mb-6 text-n-3">{item.text}</p>
+                <div className="flex items-center mt-auto">
+                  <img
+                    src={item.iconUrl}
+                    width={48}
+                    height={48}
+                    alt={item.title}
+                  />
+                  <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
+                    Explore more
+                  </p>
+                  {/* <Arrow /> 
+                </div>
+              </div>
+
+              <GradientLight />
+
+              <div
+                className="absolute inset-0.5 bg-navy-600"
+                style={{ clipPath: "url(#benefits)" }}
+              >
+                <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
+                  {/* {item.imageUrl && ( 
+                    <img
+                      src={processImg}
+                      width={380}
+                      height={362}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                  {/* )}
+                </div>
+              </div>
+
+              {/* <ClipPath /> 
+            </div>
+           ))} 
+        </div> */}
       </div>
     </section>
   )

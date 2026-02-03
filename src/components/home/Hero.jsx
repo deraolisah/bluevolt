@@ -3,15 +3,15 @@ import heroBackground from "../../assets/hero-background.jpg";
 // import gridBg from "../../assets/grid.png";
 
 import BackgroundCircles from "./BackgroundCircles.jsx";
-import TrustStrip from "./TrustStrip.jsx";
+// import TrustStrip from "./TrustStrip.jsx";
 
 
 const Hero = () => {
   return (
-    <section className="bg-navy-800 relative">
-      <div className="container overflow-x-hidden">
-        <div className="text-center max-w-4xl mx-auto relative overflow-x-hidden z-10 pt-15 pb-5 md:py-25">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+    <section className="bg-white relative">
+      <div className="container">
+        <div className="text-center max-w-4xl mx-auto relative z-10 pt-15 pb-5">
+          <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold text-navy-700 mb-6 leading-tight">
             Certified Maritime Surveys &&nbsp;
             <span className="relative whitespace-nowrap">
               Vessel Brokerage
@@ -24,8 +24,8 @@ const Hero = () => {
               />
             </span>
           </h1>
-          <p className="text-lg font-normal text-navy-200 mb-8 max-w-3xl mx-auto">
-            Maritime Academy officers with decades of offshore and oilfield experience. Independent assessments for super majors, operators, and asset owners.
+          <p className="text-base md:text-lg font-normal text-navy-500 mb-8 max-w-3xl mx-auto">
+            Trusted by oil & gas operators for vessel inspections, uptime machinery surveys, and emergency system verification.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -43,7 +43,7 @@ const Hero = () => {
           </div>
 
         </div>
-          <div className="z-10 h-100 w-full mx-auto relative">
+          {/* <div className="z-10 h-100 w-full mx-auto relative">
             <img
               src={heroBackground}
               className="w-full h-full object-cover object-center rounded-lg md:rounded-xl"
@@ -51,7 +51,7 @@ const Hero = () => {
               height={1800}
               alt="hero"
             />
-          </div>
+          </div> */}
 
           <BackgroundCircles />
 
