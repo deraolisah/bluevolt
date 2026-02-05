@@ -23,8 +23,9 @@ export default function Services() {
   ]
 
   return (
-    <section id="services" className="bg-white">
-      <div className="section-container">
+    <section id="services" className="container">
+      Services
+      {/* <div className="section-container">
         <div className="text-center mb-16">
           <h2 className="section-title">Professional Maritime Services</h2>
           <p className="section-subtitle">
@@ -53,7 +54,7 @@ export default function Services() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   )
 }

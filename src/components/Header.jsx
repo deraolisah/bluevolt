@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import logo from "../assets/logo.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -15,8 +16,9 @@ export default function Header() {
     <header className="fixed w-full top-0 z-50 bg-white text-navy-700 backdrop-blur-sm border-b border-px border-navy-200/50">
       <div className="container py-0!">
         <div className="flex justify-between items-center h-14 md:h-18">
-          <Link to="/" onClick={() => {scrollTo(0,0) }} className="text-xl tracking-tight">
-            Bluevolt Marine
+          <Link to="/" onClick={() => {scrollTo(0,0) }} className="text-xl tracking-tight font-medium flex items-center gap-1">
+          <img src={logo} alt='' className='rounded-full w-10 md:w-12 max-h-fit object-cover object-center' />
+          <span> Bluevolt Marine </span>
           </Link>
 
           <nav className="hidden md:block">
@@ -35,9 +37,9 @@ export default function Header() {
                   {item.label}
                 </NavLink>
               ))}
-              <button className="btn-secondary text-sm">
-                Request a Survey
-              </button>
+              <a href='#contact' className="btn-primary text-sm">
+                Find a Vessel
+              </a>
             </div>
           </nav>
 
@@ -92,8 +94,8 @@ export default function Header() {
                 {item.label}
               </NavLink>
             ))}
-            <button className="btn-secondary w-full mt-4">
-              Request a Survey
+            <button className="btn-primary w-full mt-4">
+              Find a Vessel
             </button>
           </div>
         </div>

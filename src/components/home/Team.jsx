@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import team01 from "../../assets/team-01.jpg";
-import team02 from "../../assets/team-02.jpg";
-import team03 from "../../assets/team-03.jpg";
-import team04 from "../../assets/team-04.jpg";
-import team05 from "../../assets/team-05.jpg";
-import team06 from "../../assets/team-06.jpg";
+import team01 from "../../assets/team/team-01.jpg";
+import team02 from "../../assets/team/team-02.jpg";
+import team03 from "../../assets/team/team-03.jpg";
+import team04 from "../../assets/team/team-04.jpg";
+import team05 from "../../assets/team/team-05.jpg";
+import team06 from "../../assets/team/team-06.jpg";
 
 // import useEmblaCarousel from 'embla-carousel-react';
 
@@ -17,7 +17,7 @@ import EmblaCarousel from './EmblaCarousel.jsx';
 
 
 const Team = () => {
-  const OPTIONS = { align: 'start', loop: true, }
+  const OPTIONS = { align: 'center', loop: true, }
   // const SLIDE_COUNT = 6
   // const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
@@ -30,34 +30,34 @@ const Team = () => {
     },
     {
       id: 2,
-      name: "John Doe",
-      role: "Officer",
+      name: "John Barkery",
+      role: "Survey Director",
       image: team02,
     },
     {
       id: 3,
       name: "James Dean",
-      role: "Engineer",
+      role: "Systems Engineer",
       image: team03,
     },
-    {
-      id: 4,
-      name: "",
-      role: "",
-      image: team04,
-    },
-    {
-      id: 5,
-      name: "Sam Doe",
-      role: "",
-      image: team05,
-    },
-    {
-      id: 6,
-      name: "Sarah Doe",
-      role: "",
-      image: team06,
-    },
+    // {
+    //   id: 4,
+    //   name: "",
+    //   role: "Electrical Engineer",
+    //   image: team04,
+    // },
+    // {
+    //   id: 5,
+    //   name: "Tasha Mercor",
+    //   role: "Public Relations",
+    //   image: team05,
+    // },
+    // {
+    //   id: 6,
+    //   name: "Sarah Doe",
+    //   role: "Safety Inspector",
+    //   image: team06,
+    // },
   ]
 
 

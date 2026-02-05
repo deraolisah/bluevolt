@@ -29,13 +29,13 @@ const EmblaCarousel = (props) => {
           {slides.map((slide, index) => (
             <div
               key={index}
-              className="min-w-0 flex-[0_0_80%] sm:flex-[0_0_50%] px-1 md:flex-[0_0_33%] lg:flex-[0_0_calc(100%/4)]"
+              className="min-w-0 flex-[0_0_84%] sm:flex-[0_0_50%] px-1 md:flex-[0_0_33%] lg:flex-[0_0_calc(100%/4)]"
             >
-              <div className="flex flex-col items-start justify-end gap-4 h-76 relative rounded-lg overflow-hidden">
+              <div className="flex flex-col items-start justify-end gap-4 h-78 relative rounded-lg overflow-hidden">
                 <img src={slide.image} alt='' className='w-full h-full absolute object-cover' />
-                <div className='space-y-0.5 z-2 p-4 w-full text-white bg-black/5 backdrop-blur-xs rounded-t-xl border-t border-gray-300/40'>
+                <div className='space-y-0.5 z-2 p-4 w-full text-white bg-black/5 backdrop-blur-sm rounded-t-xl border-t border-gray-300/40'>
                   <h3 className='font-medium'> {slide.name || "John Doe"} </h3>
-                  <p className='font-light'> {slide.role || "Job/Role"} </p>
+                  <p className='font-light text-white/80 text-sm'> {slide.role || "Job/Role"} </p>
                 </div>
                 {/* <span>{index + 1}</span> */}
               </div>
@@ -45,7 +45,7 @@ const EmblaCarousel = (props) => {
       </div>
 
       {/* Controls */}
-      <div className="flex flex-col items-center justify-between gap-5 mt-7">
+      <div className="flex flex-col items-center justify-between gap-5 mt-4.5 md:mt-6">
         {/* Arrow Buttons */}
         <div className="hidden grid-cols-2 gap-2 items-center">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
@@ -58,14 +58,14 @@ const EmblaCarousel = (props) => {
             <DotButton
               key={index}
               onClick={() => onDotButtonClick(index)}
-              className={`w-6 h-6 flex items-center justify-center rounded-full relative
+              className={`w-5 h-5 md:w-6 md:h-6 flex items-center justify-center rounded-full relative
                 appearance-none bg-transparent touch-manipulation 
                 no-underline cursor-pointer border-0 p-0 m-0
                 tap-highlight-transparent
-                ${index === selectedIndex ? 'after:opacity-100' : 'after:opacity-0'}
-                before:content-[''] before:w-4 before:h-4 before:rounded-full 
+                ${index === selectedIndex ? 'after:opacity-100 after:bg-navy-700' : 'after:opacity-0'}
+                before:content-[''] before:w-3 before:h-3 md:before:w-4 md:before:h-4 before:rounded-full 
                 before:border-2 before:border-gray-300 before:absolute
-                after:content-[''] after:w-4 after:h-4 after:rounded-full 
+                after:content-[''] after:w-3 after:h-3 md:after:w-4 md:after:h-4 after:rounded-full 
                 after:border-2 after:border-navy-700 after:absolute`}
             />
           ))}

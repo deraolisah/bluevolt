@@ -1,7 +1,8 @@
 export default function About() {
   return (
     <section className="container">
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
+      About Us
+      {/* <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <h2 className="section-title">Officer-Led Maritime Expertise</h2>
           <div className="space-y-4 text-navy-600">
@@ -53,7 +54,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   )
 }

@@ -38,7 +38,7 @@ export default function ContactForm() {
       <div className="container">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="section-title">Request a Survey or Vessel</h2>
+            <h2 className="section-title"> Request a Vessel or Survey </h2>
             <p className="section-subtitle">
               {/* Please provide details about your requirements. A senior officer will contact you within 24 hours. */}
               Please specify vessel type, operational area, duration, and technical requirements when requesting availability.

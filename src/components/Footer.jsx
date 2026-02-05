@@ -6,18 +6,18 @@ export default function Footer() {
   return (
     <footer className="bg-navy-800 text-white">
       <div className="container">
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           <div>
             <h3 className="text-xl font-display font-bold mb-6">
               Bluevolt Marine
             </h3>
             <p className="text-navy-200 mb-6">
-              Certified maritime officers providing independent surveys and vessel brokerage services to the offshore industry. Lloyd's Maritime Academy certified Masters, Chief Engineers, and ETOs with decades of operational experience.
+              Recognized by:
             </p>
             <div className="flex items-center gap-4">
               <img src={Lloyd} alt="" className="w-20 rounded-full rounded-tl-none" />
-              <img src={Lloyd} alt="" className="w-20 rotate-90 rounded-full rounded-tl-none" />
-              <img src={Lloyd} alt="" className="w-20 rotate-180 rounded-full rounded-tl-none" />
+              {/* <img src={Lloyd} alt="" className="w-20 rotate-90 rounded-full rounded-tl-none" /> */}
+              {/* <img src={Lloyd} alt="" className="w-20 rotate-180 rounded-full rounded-tl-none" /> */}
 
               {/* <div className="px-4 py-2 bg-navy-800 rounded border border-navy-700">
                 <span className="text-sm text-navy-200">Lloyd's Certified</span>
@@ -26,30 +26,53 @@ export default function Footer() {
           </div>
 
           <div>
+            <h4 className="font-semibold text-lg mb-6"> Company </h4>
+            <ul className="fex flex-col items-start space-y-2 text-navy-200">
+              <li> About Us </li>
+              <li> Contact Us </li>
+              <li> Clients </li>
+            </ul>
+          </div>
+
+          <div>
             <h4 className="font-display font-semibold text-lg mb-6">
               Contact Information
             </h4>
             <div className="space-y-4 text-navy-200">
-              <p>For survey requests and vessel inquiries</p>
+              <p>
+                <span className="font-medium"> Phone: </span> 
+              </p>
+              <p>
+                <span className="font-medium"> Email: </span> 
+              </p>
               <p>
                 <span className="font-medium">Response Time:</span> Within 24 hours
               </p>
               <p>
                 <span className="font-medium">Services:</span> Nation-Wide
               </p>
-              <p className="pt-4">
-                All surveys conducted by certified maritime officers with relevant offshore experience.
-              </p>
             </div>
+          </div>
+
+
+          <div>
+            <h4 className="font-semibold text-lg mb-6"> Legal </h4>
+            <ul className="fex flex-col items-start space-y-2 text-navy-200">
+              <li> Terms of Service </li>
+              <li> Privacy Policies </li>
+              <li> Clients </li>
+            </ul>
           </div>
         </div>
 
-        <div className="border-t border-navy-500 mt-12 pt-8 text-center text-navy-400">
+        <hr  className="border-0.5 border-navy-500 my-12"/>
+
+        <div className="text-center text-navy-400 space-y-4">
           <p>
             © {currentYear} Bluevolt Marine. All rights reserved.
           </p>
-          <p className="text-sm mt-2">
-            Independent maritime survey and vessel brokerage services.
+          <p className="">
+            Vessel Brokerage Powered by Field Experience.
           </p>
         </div>
       </div>

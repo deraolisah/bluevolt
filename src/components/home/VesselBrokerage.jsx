@@ -36,7 +36,7 @@ export default function VesselBrokerage() {
                 alt="" 
                 className="w-5 h-5 mr-2"
               /> */}
-              Request Vessel Availability
+              Request A Vessel
             </a>
           </div>
           <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
@@ -56,7 +56,7 @@ export default function VesselBrokerage() {
             </div>
             <div className="mt-8 p-4 bg-accent-blue/5 rounded border border-accent-blue/20">
               <p className="text-navy-700">
-                <span className="font-semibold">Note:</span> Please specify vessel type, operational area, duration, and technical requirements when requesting availability.
+                <span className="font-semibold">Note:</span> Please specify vessel type, operational area, duration.
               </p>
             </div>
           </div>

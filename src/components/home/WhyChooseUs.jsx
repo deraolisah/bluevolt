@@ -1,7 +1,7 @@
-import feature01 from "../../assets/process-bg.jpg";
-import feature02 from "../../assets/feature-01.avif";
-import feature03 from "../../assets/feature-02.avif";
-import feature04 from "../../assets/feature-03.avif";
+import feature01 from "../../assets/feature/feature-01.jpg";
+import feature02 from "../../assets/feature/feature-02.avif";
+import feature03 from "../../assets/feature/feature-03.avif";
+import feature04 from "../../assets/feature/feature-04.avif";
 
 export default function WhyChooseUs() {
   const features = [
@@ -22,6 +22,12 @@ export default function WhyChooseUs() {
       title: 'Fast, Accurate Reporting',
       description:
         'Detailed reports delivered within agreed timelines, with clear findings and actionable recommendations.',
+    },
+    {
+      icon: feature04,
+      title: 'Practical Recommendations',
+      description:
+        'Operationally focused advice that considers both technical requirements and commercial realities.',
     },
     {
       icon: feature04,
@@ -70,8 +76,13 @@ export default function WhyChooseUs() {
           </div>
 
           {/* div4: row 2, col 2–3 */}
-          <div className="col-span-1 md:col-span-2 md:row-span-1">
+          <div className="col-span-1 md:col-span-1 md:row-span-1">
             <FeatureCard feature={features[3]} />
+          </div>
+
+          {/* div5: row 2, col 2–3 */}
+          <div className="col-span-1 md:col-span-1 md:row-span-1">
+            <FeatureCard feature={features[4]} />
           </div>
         </div>
       </div>

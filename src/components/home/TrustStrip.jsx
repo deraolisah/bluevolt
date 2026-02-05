@@ -1,10 +1,6 @@
 export default function TrustStrip() {
   const credentials = [
     {
-      title: 'Lloyd\'s Maritime Academy',
-      description: 'Certified Officers',
-    },
-    {
       title: 'All Ranks Certified',
       description: 'Masters, Chief Engineers, ETOs',
     },
@@ -13,7 +9,11 @@ export default function TrustStrip() {
       description: 'Oil & Gas Experience',
     },
     {
-      title: 'International Standards',
+      title: 'Offshore Proven',
+      description: 'Cruise Experience',
+    },
+    {
+      title: 'Intl. Maritime Standards',
       description: 'Full Compliance',
     },
   ]

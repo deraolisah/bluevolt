@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 // import UnderConstruction from "../components/UnderConstruction.jsx";
 import Header from '../components/Header'
+import Chatbot from "../components/Chatbot.jsx";
 import Footer from '../components/Footer'
 
 import Home from "../pages/Home.jsx";
@@ -11,9 +12,10 @@ import Services from "../pages/Services.jsx";
 
 function AppRoutes() {
   return (
-    <div className="min-h-screen flex flex-col justify-between font-body overflow-x-hidden bg-white text-navy-700 pt-8">
+    <div className="min-h-screen flex flex-col justify-between font-body overflow-x-hidden bg-white text-navy-700 pt-8 relative">
       {/* <UnderConstruction /> */}
       <Header />
+      <Chatbot />
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
