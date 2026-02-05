@@ -4,7 +4,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-navy-900 text-white">
+    <footer className="bg-navy-800 text-white">
       <div className="container">
         <div className="grid md:grid-cols-2 gap-12">
           <div>
@@ -15,9 +15,9 @@ export default function Footer() {
               Certified maritime officers providing independent surveys and vessel brokerage services to the offshore industry. Lloyd's Maritime Academy certified Masters, Chief Engineers, and ETOs with decades of operational experience.
             </p>
             <div className="flex items-center gap-4">
-              <img src={Lloyd} alt="" className="w-20" />
-              <img src={Lloyd} alt="" className="w-20" />
-              <img src={Lloyd} alt="" className="w-20" />
+              <img src={Lloyd} alt="" className="w-20 rounded-full rounded-tl-none" />
+              <img src={Lloyd} alt="" className="w-20 rotate-90 rounded-full rounded-tl-none" />
+              <img src={Lloyd} alt="" className="w-20 rotate-180 rounded-full rounded-tl-none" />
 
               {/* <div className="px-4 py-2 bg-navy-800 rounded border border-navy-700">
                 <span className="text-sm text-navy-200">Lloyd's Certified</span>
@@ -44,7 +44,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-navy-800 mt-12 pt-8 text-center text-navy-400">
+        <div className="border-t border-navy-500 mt-12 pt-8 text-center text-navy-400">
           <p>
             © {currentYear} Bluevolt Marine. All rights reserved.
           </p>

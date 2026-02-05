@@ -18,7 +18,7 @@ export default function ContactForm() {
     'Machinery & Electrical Survey',
     'Emergency & Safety System Survey',
     'Vessel Brokerage',
-    'Multiple Services',
+    // 'Multiple Services',
   ]
 
   const handleChange = (e) => {
@@ -40,7 +40,8 @@ export default function ContactForm() {
           <div className="text-center mb-12">
             <h2 className="section-title">Request a Survey or Vessel</h2>
             <p className="section-subtitle">
-              Please provide details about your requirements. A senior officer will contact you within 24 hours.
+              {/* Please provide details about your requirements. A senior officer will contact you within 24 hours. */}
+              Please specify vessel type, operational area, duration, and technical requirements when requesting availability.
             </p>
           </div>
 
@@ -136,7 +137,7 @@ export default function ContactForm() {
                   value={formData.vesselType}
                   onChange={handleChange}
                   placeholder="e.g., PSV, AHTS, Drilling Rig"
-                  className="w-full px-4 py-3 border border-navy-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-blue focus:border-transparent"
+                  className="w-full px-4 py-3 border border-navy-300 rounded-md focus:outline-none focus:ring focus:ring-navy-700 focus:border-transparent"
                 />
               </div>
 
@@ -151,7 +152,7 @@ export default function ContactForm() {
                   value={formData.location}
                   onChange={handleChange}
                   placeholder="e.g., North Sea, Gulf of Mexico"
-                  className="w-full px-4 py-3 border border-navy-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-blue focus:border-transparent"
+                  className="w-full px-4 py-3 border border-navy-300 rounded-md focus:outline-none focus:ring focus:ring-navy-700 focus:border-transparent"
                 />
               </div>
 
@@ -166,7 +167,7 @@ export default function ContactForm() {
                   value={formData.timeline}
                   onChange={handleChange}
                   placeholder="e.g., Urgent, Within 2 weeks"
-                  className="w-full px-4 py-3 border border-navy-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-blue focus:border-transparent"
+                  className="w-full px-4 py-3 border border-navy-300 rounded-md focus:outline-none focus:ring focus:ring-navy-700 focus:border-transparent"
                 />
               </div>
             </div>
@@ -181,7 +182,7 @@ export default function ContactForm() {
                 value={formData.message}
                 onChange={handleChange}
                 rows="4"
-                className="w-full px-4 py-3 border border-navy-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-blue focus:border-transparent"
+                className="w-full px-4 py-3 border border-navy-300 rounded-md focus:outline-none focus:ring focus:ring-navy-700 focus:border-transparent"
                 placeholder="Please provide any additional details about your requirements, specific concerns, or operational context."
               ></textarea>
             </div>

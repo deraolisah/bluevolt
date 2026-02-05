@@ -8,11 +8,11 @@ import BackgroundCircles from "./BackgroundCircles.jsx";
 
 const Hero = () => {
   return (
-    <section className="bg-white relative">
+    <section className=" relative">
       <div className="container">
-        <div className="text-center max-w-4xl mx-auto relative z-10 pt-15 pb-5">
-          <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold text-navy-700 mb-6 leading-tight">
-            Certified Maritime Surveys &&nbsp;
+        <div className="text-center max-w-4xl mx-auto relative z-10 pt-10 pb-5">
+          <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold text-navy-700 mb-2 leading-normal">
+            {/* Certified Maritime Surveys &&nbsp; */}
             <span className="relative whitespace-nowrap">
               Vessel Brokerage
               <img
@@ -23,20 +23,22 @@ const Hero = () => {
                 alt="Curve"
               />
             </span>
+            <br/>
+            &nbsp;via Certified Maritime Officers
           </h1>
           <p className="text-base md:text-lg font-normal text-navy-500 mb-8 max-w-3xl mx-auto">
-            Trusted by oil & gas operators for vessel inspections, uptime machinery surveys, and emergency system verification.
+            Trusted by oil & gas super majors and upstream operators for maritime vessel brokerage, uptime machinery, electrical and emergency system survey.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href="#contact"
-              className="btn-primary inline-flex items-center justify-center text-lg px-8 py-4"
+              className="btn-primary inline-flex items-center justify-center px-8 py-4"
             >
-              Request a Survey
+              Request Survey
             </a>
             <a
               href="#vessel-brokerage"
-              className="btn-secondary inline-flex items-center justify-center text-lg px-8 py-4"
+              className="btn-secondary inline-flex items-center justify-center px-8 py-4"
             >
               Find a Vessel
             </a>

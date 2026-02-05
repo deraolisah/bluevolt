@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header className="fixed w-full top-0 z-50 bg-white text-navy-700 backdrop-blur-sm border-b border-px border-navy-200/50">
       <div className="container py-0!">
-        <div className="flex justify-between items-center h-16 md:h-18">
+        <div className="flex justify-between items-center h-14 md:h-18">
           <Link to="/" onClick={() => {scrollTo(0,0) }} className="text-xl tracking-tight">
             Bluevolt Marine
           </Link>
@@ -36,7 +36,7 @@ export default function Header() {
                 </NavLink>
               ))}
               <button className="btn-secondary text-sm">
-                Request Survey
+                Request a Survey
               </button>
             </div>
           </nav>
@@ -75,7 +75,7 @@ export default function Header() {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden bg-white/0">
+        <div className="md:hidden bg-white w-full h-full">
           <div className="px-4 pt-2 pb-6 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <NavLink

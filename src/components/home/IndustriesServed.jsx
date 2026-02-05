@@ -15,7 +15,7 @@ export default function IndustriesServed() {
       <div className="container">
         <div className="text-center mb-6 md:mb-12">
           <h2 className="section-title">
-            Industries Served
+            Who We Serve
           </h2>
           <p className="max-w-3xl mx-auto text-lg">
             We serve leading companies in the offshore and maritime sectors, providing technical assessments they can trust.

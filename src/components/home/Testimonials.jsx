@@ -20,8 +20,9 @@ export default function Testimonials() {
   return (
     <section className="bg-white">
       <div className="container">
-        <div className="text-center mb-16">
-          <h2 className="section-title">Professional Endorsements</h2>
+        <div className="text-center">
+          {/* <h2 className="section-title">Professional Endorsements</h2> */}
+          <h2 className="section-title"> What Our Clients Say </h2>
           <p className="section-subtitle">
             Trusted by technical managers and marine superintendents in the offshore industry.
           </p>

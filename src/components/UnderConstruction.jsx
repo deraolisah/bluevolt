@@ -2,19 +2,19 @@ import { Wrench, Clock } from "lucide-react";
 
 const UnderConstruction = () => {
   return (
-    <main className="relative flex min-h-[calc(100vh-80px)] items-center justify-center overflow-hidden bg-white px-6">
+    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-white px-6 -mt-8">
       
       {/* Background Accent */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-blue-100 blur-3xl" />
+      <div className="pointer-events-none absolute inset-0 z-0">
+        <div className="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-blue-50 blur-3xl" />
         <div className="absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-gray-100 blur-3xl" />
       </div>
 
       {/* Content */}
-      <div className="max-w-xl text-center">
+      <div className="max-w-lg text-center z-10">
         
         {/* Icon */}
-        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-blue-50">
+        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-blue-50 border border-blue-100">
           <Wrench className="h-8 w-8 text-blue-600 animate-pulse" />
         </div>
 
@@ -26,7 +26,9 @@ const UnderConstruction = () => {
         {/* Description */}
         <p className="mt-4 text-base leading-relaxed text-gray-600 md:text-lg">
           We’re currently working on something exciting.
-          This page will be available very soon — stay tuned.
+          <br/>
+          This page will be available very soon <br/>
+          Stay tuned.
         </p>
 
         {/* Status */}

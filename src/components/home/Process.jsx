@@ -46,7 +46,7 @@ export default function Process() {
                     {step.description}
                   </p>
 
-                  <div className="absolute z-0 inset-0 opacity-10 transition-all duration-400 group-hover:opacity-15 group-hover:scale-110 pointer-events-none">
+                  <div className="absolute z-0 inset-0 opacity-8 transition-all duration-400 group-hover:opacity-15 group-hover:scale-110 pointer-events-none">
                     <img
                       src={processImg}
                       width={380}

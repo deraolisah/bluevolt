@@ -17,6 +17,7 @@
   --color-navy-500: #486581;
   --color-navy-600: #334e68;
   --color-navy-700: #243b53;
+  /* --color-navy-700: #0A1F44; */
   --color-navy-800: #102a43;
   --color-navy-900: #0a1929;
   --color-accent-blue: #1e88e5;
@@ -30,7 +31,7 @@
   }
   
   body {
-    @apply bg-navy-50 text-navy-900 font-body font-light;
+    @apply bg-white text-navy-700 font-body font-light;
   }
 }
 
@@ -43,11 +44,11 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-linear-to-tl from-navy-700 to-cyan-200 text-white border border-navy-50/30 px-6 py-3 rounded-full font-semibold hover:bg-navy-800 hover:scale-[1.02] transition-all duration-200 focus:outline-none cursor-pointer inset-shadow-navy-700 inset-shadow-sm overflow-hidden;
+    @apply bg-linear-to-tl from-navy-700 to-cyan-300 text-white border border-navy-50/30 px-6 py-3 rounded-full font-medium hover:bg-navy-800 hover:scale-[1.02] transition-all duration-200 focus:outline-none cursor-pointer inset-shadow-navy-700 inset-shadow-sm overflow-hidden;
   }
   
   .btn-secondary {
-    @apply bg-navy-700 text-white border border-navy-300 px-6 py-3 rounded-full font-semibold hover:bg-navy-800 hover:scale-[1.02] transition-all duration-200 focus:outline-none cursor-pointer inset-shadow-navy-700 inset-shadow-sm overflow-hidden;
+    @apply bg-navy-700 text-white border border-navy-300 px-6 py-3 rounded-full font-medium hover:bg-navy-800 hover:scale-[1.02] transition-all duration-200 focus:outline-none cursor-pointer inset-shadow-navy-700 inset-shadow-sm overflow-hidden;
   }
   
   .section-container {
@@ -59,7 +60,7 @@
   }
   
   .section-subtitle {
-    @apply text-lg text-navy-600 max-w-3xl mx-auto md:mb-12 mb-6;
+    @apply max-w-3xl mx-auto text-lg md:mb-12 mb-6;
   }
   
   .card-hover {
