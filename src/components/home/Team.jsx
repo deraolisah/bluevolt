@@ -36,7 +36,7 @@ const Team = () => {
     },
     {
       id: 3,
-      name: "James Dean",
+      name: "Malik",
       role: "Systems Engineer",
       image: team03,
     },

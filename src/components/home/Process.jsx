@@ -5,23 +5,23 @@ export default function Process() {
   const steps = [
     {
       number: '01',
-      title: 'Request',
-      description: 'Submit survey details including vessel type, location, and scope requirements.',
+      title: 'Request Vessel',
+      description: 'Submit vessel details including vessel type, location, and job scope requirements.',
     },
     {
       number: '02',
-      title: 'Review',
-      description: 'Our senior officers review requirements and assign appropriate survey team.',
+      title: 'Review & Survey',
+      description: 'Our Officers review requirements and recommend appropriate vessel.',
     },
+    // {
+    //   number: '03',
+    //   title: 'Survey',
+    //   description: 'On-site assessment by certified officers with relevant operational experience.',
+    // },
     {
       number: '03',
-      title: 'Survey',
-      description: 'On-site assessment by certified officers with relevant operational experience.',
-    },
-    {
-      number: '04',
       title: 'Report',
-      description: 'Detailed technical report with findings, compliance status, and practical recommendations.',
+      description: 'Detailed report with findings, compliance status, and practical recommendations.',
     },
   ]
 
@@ -35,13 +35,19 @@ export default function Process() {
         <div className="relative mt-8">
           {/* <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-navy-200/50 -translate-y-1/2"></div> */}
           {/* <div className="absolute z-1 top-1/2 left-1/2 -translate-1/2 w-full aspect-square bg-radial from-navy-200/50 to-[#28206C]/0 to-60% pointer-events-none"></div> */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
             {steps.map((step, index) => (
               <div key={index} className="relative">
-                <div className="bg-navy-50 rounded-xl min-h-68 p-8 text-center z-10 relative border border-navy-200 flex flex-col justify-between group overflow-hidden">
-                  <h3 className="font-display font-semibold text-start text-xl mb-4">
-                    {step.title}
-                  </h3>
+                <div className="bg-navy-50 rounded-xl min-h-68 p-6 md:p-8 text-center z-10 relative border border-navy-200 flex flex-col justify-between gap-2 group overflow-hidden">
+                  <div>
+                    <span className="bg-white text-navy-700 w-10 h-10 flex items-center justify-center rounded-full font-semibold mb-2"> 
+                      {step.number} 
+                    </span>
+                    <h3 className="font-medium text-start text-xl mb-4">
+                      {step.title}
+                    </h3>
+                  </div>
+
                   <p className="text-navy-700 text-start w-full">
                     {step.description}
                   </p>

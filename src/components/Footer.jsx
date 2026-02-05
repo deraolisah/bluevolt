@@ -26,7 +26,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-lg mb-6"> Company </h4>
+            <h4 className="font-semibold text-lg mb-6"> Quick Links </h4>
             <ul className="fex flex-col items-start space-y-2 text-navy-200">
               <li> About Us </li>
               <li> Contact Us </li>
@@ -36,9 +36,9 @@ export default function Footer() {
 
           <div>
             <h4 className="font-display font-semibold text-lg mb-6">
-              Contact Information
+              Company
             </h4>
-            <div className="space-y-4 text-navy-200">
+            <div className="space-y-2 text-navy-200">
               <p>
                 <span className="font-medium"> Phone: </span> 
               </p>
@@ -60,7 +60,6 @@ export default function Footer() {
             <ul className="fex flex-col items-start space-y-2 text-navy-200">
               <li> Terms of Service </li>
               <li> Privacy Policies </li>
-              <li> Clients </li>
             </ul>
           </div>
         </div>

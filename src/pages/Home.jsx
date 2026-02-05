@@ -5,13 +5,12 @@ import TrustStrip from '../components/home/TrustStrip';
 import Team from '../components/home/Team';
 import WhyChooseUs from '../components/home/WhyChooseUs';
 import IndustriesServed from '../components/home/IndustriesServed';
-import Clients from "../components/home/Clients.jsx";
 import Process from '../components/home/Process';
 import VesselBrokerage from '../components/home/VesselBrokerage';
-import Testimonials from '../components/home/Testimonials';
+// import Testimonials from '../components/home/Testimonials';
+import Clients from "../components/home/Clients.jsx";
 // import CTASection from '../components/home/CTASection';
 import ContactForm from '../components/home/ContactForm';
-// import Marquee from '../components/home/Marquee.jsx';
 
 const Home = () => {
   return (
@@ -21,11 +20,10 @@ const Home = () => {
       <Team />
       <WhyChooseUs />
       <IndustriesServed />
-      {/* <Marquee /> */}
-      <Clients />
       <Process />
       <VesselBrokerage />
       {/* <Testimonials /> */}
+      <Clients />
       {/* <CTASection /> */}
       <ContactForm />
     </>
