@@ -40,16 +40,17 @@ export default function Footer() {
             </h4>
             <div className="space-y-2 text-navy-200">
               <p>
-                <span className="font-medium"> Phone: </span> 
+                <span className="font-bold"> Phone: </span> 
               </p>
               <p>
-                <span className="font-medium"> Email: </span> 
+                <span className="font-bold"> Email: </span> 
+                info@bluevoltmarine.com
               </p>
               <p>
-                <span className="font-medium">Response Time:</span> Within 24 hours
+                <span className="font-bold">Response Time:</span> Within 24 hours
               </p>
               <p>
-                <span className="font-medium">Services:</span> Nation-Wide
+                <span className="font-bold">Services:</span> Nation-Wide
               </p>
             </div>
           </div>

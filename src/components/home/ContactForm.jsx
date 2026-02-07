@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -14,10 +14,10 @@ export default function ContactForm() {
   })
 
   const serviceTypes = [
-    'Maritime Vessel Survey',
-    'Machinery & Electrical Survey',
-    'Emergency & Safety System Survey',
     'Vessel Brokerage',
+    'Maritime Vessel Survey',
+    'Machinery Electrical & Emergency Systems Survey',
+    // 'Emergency & Safety System Survey',
     // 'Multiple Services',
   ]
 
@@ -166,7 +166,7 @@ export default function ContactForm() {
                   name="timeline"
                   value={formData.timeline}
                   onChange={handleChange}
-                  placeholder="e.g., Urgent, Within 2 weeks"
+                  placeholder="e.g., Urgent, Within 2 weeks, 1 month"
                   className="w-full px-4 py-3 border border-navy-300 rounded-md focus:outline-none focus:ring focus:ring-navy-700 focus:border-transparent"
                 />
               </div>

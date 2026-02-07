@@ -38,7 +38,7 @@ export default function Header() {
                 </NavLink>
               ))}
               <a href='#contact' className="btn-primary text-sm">
-                Find a Vessel
+                Request a Vessel
               </a>
             </div>
           </nav>

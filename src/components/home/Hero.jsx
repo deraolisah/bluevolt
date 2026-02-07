@@ -6,19 +6,33 @@ import hero3 from "../../assets/hero/slide-03.jpg";
 import BackgroundCircles from "./BackgroundCircles.jsx";
 
 const Hero = () => {
-
   const slides = [hero1, hero2, hero3];
   const SLIDE_DURATION = 5000;
   const [current, setCurrent] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
+    if (isPaused) return;
+
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, SLIDE_DURATION);
 
-
     return () => clearInterval(interval);
-  }, []);
+  }, [isPaused]);
+
+  const handleTimerClick = (index) => {
+    setCurrent(index);
+    // Optional: reset the timer animation when manually changing slides
+  };
+
+  // const handleMouseEnter = () => {
+  //   setIsPaused(true);
+  // };
+
+  // const handleMouseLeave = () => {
+  //   setIsPaused(false);
+  // };
 
   return (
     <section className="container relative">
@@ -34,12 +48,14 @@ const Hero = () => {
               alt="Curve"
             />
           </span>
-          <br/>
+          <br />
           &nbsp;by Certified Maritime Officers
         </h1>
 
         <p className="text-base md:text-lg font-normal text-navy-500 mb-8 max-w-3xl mx-auto">
-          Trusted by oil & gas super majors and upstream operators for maritime vessel brokerage, uptime machinery, electrical and emergency system survey.
+          Trusted by oil & gas super majors and upstream operators for maritime
+          vessel brokerage, uptime machinery, electrical and emergency system
+          survey.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -52,14 +68,17 @@ const Hero = () => {
           <a
             href="#vessel-brokerage"
             className="btn-secondary inline-flex items-center justify-center px-8 py-4"
-            >
+          >
             Request Survey
           </a>
         </div>
       </div>
-      
 
-      <div className="mt-4 md:mt-12 z-10 h-60 md:h-120 w-full mx-auto relative">
+      <div 
+        className="mt-4 md:mt-12 z-10 h-60 md:h-120 w-full mx-auto relative"
+        // onMouseEnter={handleMouseEnter}
+        // onMouseLeave={handleMouseLeave}
+      >
         {slides.map((img, i) => (
           <img
             key={i}
@@ -72,9 +91,11 @@ const Hero = () => {
         ))}
         <div className="w-[calc(100%-20px)] flex justify-center gap-3 z-20 absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/10 backdrop-blur-xs p-2 rounded-lg">
           {slides.map((_, i) => (
-            <div
+            <button
               key={i}
-              className="w-full h-0.5 bg-gray-300/60 rounded overflow-hidden"
+              onClick={() => handleTimerClick(i)}
+              className="w-full h-0.5 bg-gray-300/60 rounded overflow-hidden cursor-pointer hover:bg-gray-400/60 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
+              aria-label={`Go to slide ${i + 1}`}
             >
               {i === current && (
                 <div
@@ -82,11 +103,10 @@ const Hero = () => {
                   style={{ animationDuration: `${SLIDE_DURATION}ms` }}
                 />
               )}
-            </div>
+            </button>
           ))}
         </div>
       </div>
-
 
       <BackgroundCircles />
     </section>
