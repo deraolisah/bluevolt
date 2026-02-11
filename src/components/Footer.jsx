@@ -9,14 +9,11 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           <div>
             <h3 className="text-xl font-display font-bold mb-6">
-              Bluevolt Marine
+              BlueVoltMarine
             </h3>
             
-            <p className="text-navy-200 mb-6">
-              REG No: RC9268505
-            </p>
-            <p className="text-navy-200 mb-6">
-              REG No: RC9268505
+            <p className="text-navy-200 mb-6 text-sm">
+              BlueVoltMarine is a brokerage-first maritime services company built from the deck plate up by experienced maritime officers. We combine commercial vessel sourcing with practical maritime judgement and technical readiness awareness, so clients receive assets that are fit-for-purpose and prepared for safe, reliable operations.
             </p>
 
             <p className="text-navy-200 mb-6">
@@ -76,6 +73,9 @@ export default function Footer() {
           </p>
           <p className="">
             Vessel Brokerage Powered by Field Experience.
+          </p>
+          <p className="">
+            REG No: RC9268505
           </p>
         </div>
       </div>
