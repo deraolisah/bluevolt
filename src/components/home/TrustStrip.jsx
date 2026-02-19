@@ -20,7 +20,7 @@ export default function TrustStrip() {
 
   return (
     <div className="bg-white text-navy-700">
-      <div className="section-container py-4!">
+      <div className="section-container">
         <div className="overflow-x-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
           {credentials.map((credential, index) => (
             <div key={index} className="text-center w-full">

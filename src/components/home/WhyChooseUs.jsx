@@ -31,7 +31,7 @@ export default function WhyChooseUs() {
     },
     {
       icon: feature04,
-      title: 'Practical Recommendations',
+      title: 'Field Experienced',
       description:
         'Operationally focused advice that considers both technical requirements and commercial realities.',
     },

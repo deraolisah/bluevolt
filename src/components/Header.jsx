@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.jpeg";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -17,8 +17,8 @@ export default function Header() {
       <div className="container py-0!">
         <div className="flex justify-between items-center h-14 md:h-18">
           <Link to="/" onClick={() => {scrollTo(0,0) }} className="text-xl tracking-tight font-medium flex items-center gap-1">
-          <img src={logo} alt='' className='rounded-full w-10 md:w-12 max-h-fit object-cover object-center' />
-          <span> Bluevolt Marine </span>
+            <img src={logo} alt='' className='rounded-full w-10 md:w-12 h-fit object-cover object-center' />
+            <span> BlueVoltMarine </span>
           </Link>
 
           <nav className="hidden md:block">
@@ -95,7 +95,7 @@ export default function Header() {
               </NavLink>
             ))}
             <button className="btn-primary w-full mt-4">
-              Find a Vessel
+              Request a Vessel
             </button>
           </div>
         </div>

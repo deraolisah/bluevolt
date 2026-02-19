@@ -3,7 +3,7 @@ import curve from "../../assets/curve.png";
 import hero1 from "../../assets/hero/slide-01.jpg";
 import hero2 from "../../assets/hero/slide-02.jpg";
 import hero3 from "../../assets/hero/slide-03.jpg";
-import BackgroundCircles from "./BackgroundCircles.jsx";
+// import BackgroundCircles from "./BackgroundCircles.jsx";
 
 const Hero = () => {
   const slides = [hero1, hero2, hero3];
@@ -35,9 +35,9 @@ const Hero = () => {
   // };
 
   return (
-    <section className="container relative">
-      <div className="text-center max-w-4xl mx-auto relative z-10 md:pt-8">
-        <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold text-navy-700 mb-2 leading-normal">
+    <section className="container relative py-0! px-0!">
+      <div className="text-center h-full w-full mx-auto absolute z-10 left-1/2 -translate-x-1/2 pt-10 text-white bg-black/40 backdrop-blur-xs px-4 flex flex-col items-center justify-center">
+        <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold leading-normal">
           <span className="relative whitespace-nowrap">
             Vessel Brokerage
             <img
@@ -52,30 +52,23 @@ const Hero = () => {
           &nbsp;by Certified Maritime Officers
         </h1>
 
-        <p className="text-base md:text-lg font-normal text-navy-500 mb-8 max-w-3xl mx-auto">
+        <p className="text-base font-normal mb-6 max-w-3xl mx-auto">
           Trusted by oil & gas super majors and upstream operators for maritime
           vessel brokerage, uptime machinery, electrical and emergency system
           survey.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <a
-            href="#contact"
-            className="btn-primary inline-flex items-center justify-center px-8 py-4"
-          >
-            Find a Vessel
+        <div className="flex gap-3 justify-center">
+          <a href="#vessel-brokerage" className="bg-white text-navy-600 btn-secondary inline-flex items-center justify-center px-8 py-3">
+            Learn More
           </a>
-          <a
-            href="#vessel-brokerage"
-            className="btn-secondary inline-flex items-center justify-center px-8 py-4"
-          >
-            Request Survey
+          <a href="#contact" className="btn-primary inline-flex items-center justify-center px-8 py-4">
+            Find Vessel
           </a>
         </div>
       </div>
 
-      <div 
-        className="mt-4 md:mt-12 z-10 h-60 md:h-120 w-full mx-auto relative"
+      <div className="mt-6 md:mt-10 h-140 w-full mx-auto relative"
         // onMouseEnter={handleMouseEnter}
         // onMouseLeave={handleMouseLeave}
       >
@@ -84,7 +77,7 @@ const Hero = () => {
             key={i}
             src={img}
             alt="hero"
-            className={`absolute inset-0 w-full h-full object-cover object-center rounded-lg md:rounded-xl transition-opacity duration-1000 ${
+            className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ${
               i === current ? "opacity-100" : "opacity-0"
             }`}
           />
@@ -108,7 +101,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <BackgroundCircles />
+      {/* <BackgroundCircles /> */}
     </section>
   );
 };

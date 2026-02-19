@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import team01 from "../../assets/team/team-01.jpg";
-import team02 from "../../assets/team/team-02.jpg";
+import team02 from "../../assets/team/survey-director.jpeg";
 import team03 from "../../assets/team/team-03.jpg";
 import team04 from "../../assets/team/team-04.jpg";
 import team05 from "../../assets/team/team-05.jpg";
@@ -31,7 +31,7 @@ const Team = () => {
     {
       id: 2,
       name: "John Barkery",
-      role: "Survey Director",
+      role: "Technical/Survey Director",
       image: team02,
     },
     {

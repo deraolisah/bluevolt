@@ -32,8 +32,8 @@ const EmblaCarousel = (props) => {
               className="min-w-0 flex-[0_0_84%] sm:flex-[0_0_50%] px-1 md:flex-[0_0_33%] lg:flex-[0_0_calc(100%/4)]"
             >
               <div className="flex flex-col items-start justify-end gap-4 h-78 relative rounded-lg overflow-hidden">
-                <img src={slide.image} alt='' className='w-full h-full absolute object-cover' />
-                <div className='space-y-0.5 z-2 p-4 w-full text-white bg-black/5 backdrop-blur-sm rounded-t-xl border-t border-gray-300/40'>
+                <img src={slide.image} alt='' className='w-full h-full object-cover object-top' />
+                <div className='space-y-0.5 z-2 p-4 w-full text-white bg-black/5 backdrop-blur-sm rounded-t-xl border-t border-gray-300/40 absolute'>
                   <h3 className='font-medium'> {slide.name || "John Doe"} </h3>
                   <p className='font-light text-white/80 text-sm'> {slide.role || "Job/Role"} </p>
                 </div>

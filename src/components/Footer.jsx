@@ -46,7 +46,8 @@ export default function Footer() {
                 info@bluevoltmarine.com
               </p>
               <p>
-                <span className="font-bold">Response Time:</span> Within 24 hours
+                <span className="font-bold"> Address: </span> 
+                6th Floor, No 1 Akin Adesola Street, Victoria Island, Lagos Nigeria. 101241
               </p>
               <p>
                 <span className="font-bold">Services:</span> Nation-Wide
@@ -72,6 +73,9 @@ export default function Footer() {
           </p>
           <p className="">
             Vessel Brokerage Powered by Field Experience.
+          </p>
+          <p> 
+            REG NO: RC9268505
           </p>
         </div>
       </div>
