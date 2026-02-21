@@ -38,7 +38,7 @@ const UnderConstruction = () => {
         </div>
 
         {/* Divider */}
-        <div className="mx-auto mt-10 h-[2px] w-24 rounded-full bg-blue-600" />
+        <div className="mx-auto mt-10 h-0.5 w-24 rounded-full bg-blue-600" />
       </div>
     </main>
   );
