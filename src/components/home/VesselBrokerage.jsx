@@ -11,8 +11,8 @@ export default function VesselBrokerage() {
   ]
 
   return (
-    <section id="vessel-brokerage" className="bg-navy-50">
-      <div className="section-container">
+    <section id="vessel-brokerage" className="container bg-navy-50">
+      <div className="">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="section-title">Vessel Brokerage Services</h2>

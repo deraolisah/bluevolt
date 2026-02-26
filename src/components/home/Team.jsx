@@ -8,7 +8,7 @@ import team06 from "../../assets/team/team-06.jpg";
 
 // import useEmblaCarousel from 'embla-carousel-react';
 
-import EmblaCarousel from './EmblaCarousel.jsx';
+// import EmblaCarousel from './EmblaCarousel.jsx';
 // import './embla.css'
 // import Autoplay from 'embla-carousel-react';
 // import { NextButton, PrevButton, usePrevNextButtons } from './EmblaCarouselArrowButtons';
@@ -74,7 +74,7 @@ const Team = () => {
       </div>
 
 
-      <EmblaCarousel slides={team} options={OPTIONS} />
+      {/* <EmblaCarousel slides={team} options={OPTIONS} /> */}
 
     </section>
   )

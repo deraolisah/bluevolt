@@ -1,16 +1,16 @@
 export default function TrustStrip() {
   const credentials = [
     {
-      title: 'All Ranks Certified',
-      description: 'Masters, Chief Engineers, ETOs',
+      title: 'Globally Certified',
+      description: 'Electro-Technical Officers',
     },
     {
       title: 'Offshore Proven',
       description: 'Oil & Gas Experience',
     },
     {
-      title: 'Offshore Proven',
-      description: 'Cruise Experience',
+      title: 'Technical Readiness',
+      description: 'Decades of Maritime Experience',
     },
     {
       title: 'Intl. Maritime Standards',
@@ -19,21 +19,19 @@ export default function TrustStrip() {
   ]
 
   return (
-    <div className="bg-white text-navy-700">
-      <div className="section-container">
-        <div className="overflow-x-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {credentials.map((credential, index) => (
-            <div key={index} className="text-center w-full">
-              <h3 className="font-bold mb-1">
-                {credential.title}
-              </h3>
-              <p className="text-xs sm:text-sm">
-                {credential.description}
-              </p>
-            </div>
-          ))}
-        </div>
+    <section className="container py-8! text-primary">
+      <div className="overflow-x-auto grid grid-cols-2 lg:grid-cols-4 gap-px bg-navy-200">
+        {credentials.map((credential, index) => (
+          <div key={index} className="text-start w-full bg-white p-4 odd:pl-0! lg:nth-[3]:pl-4! ">
+            <h3 className="font-bold mb-1">
+              {credential.title}
+            </h3>
+            <p className="text-xs sm:text-sm">
+              {credential.description}
+            </p>
+          </div>
+        ))}
       </div>
-    </div>
+    </section>
   )
 }

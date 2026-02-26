@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function ContactForm() {
+export default function RequestForm() {
   const [formData, setFormData] = useState({
     companyName: '',
     contactPerson: '',
@@ -34,7 +34,7 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="contact" className="">
+    <section id="request" className="">
       <div className="container">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -45,7 +45,7 @@ export default function ContactForm() {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="bg-navy-50 rounded-lg shadow-lg p-6 md:p-8">
+          <form onSubmit={handleSubmit} className="bg-navy-50 rounded-lg shadow-lg p-4.5 md:p-8">
             <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-8">
               <div>
                 <label htmlFor="companyName" className="block text-sm font-medium text-navy-700 mb-2">

@@ -6,8 +6,11 @@
 
 @theme {
   --font-body: "Bricolage Grotesque", sans-serif;
-  --font-sora: "Sora", sans-serif;
+  /* --font-sora: "Sora", sans-serif; */
   /* --font-display: 'Barlow', system-ui, sans-serif; */
+
+  --color-primary: #012E71;
+
 
   --color-navy-50: #f0f4f8;
   --color-navy-100: #d9e2ec;
@@ -31,24 +34,29 @@
   }
   
   body {
-    @apply bg-white text-navy-700 font-body font-light;
+    @apply bg-white text-primary font-body font-light;
+  }
+
+  button{
+    @apply cursor-pointer;
   }
 }
 
 @layer utilities{
   .container{
     /* @apply max-w-2xl mx-auto px-4 sm:px-6 md:px-8 lg:px-0 py-16 md:py-24;  */
-    @apply max-w-[1920px] mx-auto px-3 sm:px-6 md:px-8 py-16 md:py-24; 
+    @apply max-w-[1920px] mx-auto px-3 sm:px-6 md:px-8 py-20 md:py-24; 
   }
 }
 
+
 @layer components {
   .btn-primary {
-    @apply bg-linear-to-tl from-navy-700 to-cyan-300 text-white border border-navy-50/30 px-6 py-3 rounded-full font-medium hover:bg-navy-800 hover:scale-[1.02] transition-all duration-200 focus:outline-none cursor-pointer inset-shadow-navy-700 inset-shadow-sm overflow-hidden;
+    @apply bg-primary text-white border border-navy-50/30 px-6 py-2 rounded-full font-medium hover:bg-primary/88 hover:scale-[1.008] transition-all duration-200 focus:outline-none inset-shadow-primary inset-shadow-sm overflow-hidden;
   }
   
   .btn-secondary {
-    @apply bg-navy-700 text-white border border-navy-300 px-6 py-3 rounded-full font-medium hover:bg-navy-800 hover:scale-[1.02] transition-all duration-200 focus:outline-none cursor-pointer inset-shadow-navy-700 inset-shadow-sm overflow-hidden;
+    @apply bg-white text-primary border border-navy-300 px-6 py-2 rounded-full font-medium hover:scale-[1.008] transition-all duration-200 focus:outline-none overflow-hidden;
   }
   
   .section-container {
@@ -56,7 +64,7 @@
   }
   
   .section-title {
-    @apply text-[26px] md:text-[48px] leading-normal md:leading-15 text-navy-800 mb-2 md:mb-4;
+    @apply text-[24px] md:text-[32px] font-normal leading-normal md:leading-15 text-primary mb-2 md:mb-4;
   }
   
   .section-subtitle {

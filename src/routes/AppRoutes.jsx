@@ -12,7 +12,7 @@ import Services from "../pages/Services.jsx";
 
 function AppRoutes() {
   return (
-    <div className="min-h-screen flex flex-col justify-between font-body overflow-x-hidden bg-white text-navy-700 pt-8 relative">
+    <div className="min-h-screen flex flex-col justify-between font-body overflow-x-hidden bg-white text-primary relative">
       {/* <UnderConstruction /> */}
       <Header />
       <Chatbot />
