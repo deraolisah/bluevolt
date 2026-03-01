@@ -25,10 +25,10 @@ const OurCatalogue = () => {
   
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 640) setSlidesToShow(1.5);
+      if (window.innerWidth < 540) setSlidesToShow(1.5);
       else if (window.innerWidth < 768) setSlidesToShow(3);
       else if (window.innerWidth < 1024) setSlidesToShow(4);
-      else setSlidesToShow(6);
+      else setSlidesToShow(5);
     };
 
     handleResize();
@@ -114,7 +114,7 @@ const OurCatalogue = () => {
               onClick={() => scrollTo(index)}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
                 index === selectedIndex 
-                  ? 'w-6 bg-navy-700' 
+                  ? 'w-6 bg-primary' 
                   : 'bg-gray-300 hover:bg-gray-400'
               }`}
               aria-label={`Go to slide ${index + 1}`}

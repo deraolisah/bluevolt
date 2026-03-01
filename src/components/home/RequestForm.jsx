@@ -1,6 +1,11 @@
 import { useState } from 'react';
 
-export default function RequestForm() {
+
+const RequestForm = () => {
+
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+
+  
   const [formData, setFormData] = useState({
     companyName: '',
     contactPerson: '',
@@ -12,13 +17,14 @@ export default function RequestForm() {
     timeline: '',
     message: '',
   })
+  
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null)
 
   const serviceTypes = [
     'Vessel Brokerage',
     'Maritime Vessel Survey',
     'Machinery Electrical & Emergency Systems Survey',
-    // 'Emergency & Safety System Survey',
-    // 'Multiple Services',
   ]
 
   const handleChange = (e) => {
@@ -26,11 +32,45 @@ export default function RequestForm() {
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Form submission logic would go here
-    console.log('Form submitted:', formData)
-    alert('Thank you for your request. Our team will contact you within 24 hours.')
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+    
+    try {
+      // Send to your Express backend
+      const response = await fetch(`${API_URL}/send-email`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+      
+      const data = await response.json()
+      
+      if (response.ok && data.success) {
+        setSubmitStatus('success')
+        setFormData({
+          companyName: '',
+          contactPerson: '',
+          email: '',
+          phone: '',
+          serviceType: '',
+          vesselType: '',
+          location: '',
+          timeline: '',
+          message: '',
+        })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -38,15 +78,30 @@ export default function RequestForm() {
       <div className="container">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="section-title"> Request a Vessel or Survey </h2>
+            <h2 className="section-title">Request a Vessel or Survey</h2>
             <p className="section-subtitle">
-              {/* Please provide details about your requirements. A senior officer will contact you within 24 hours. */}
               Please specify vessel type, operational area, duration, and technical requirements when requesting availability.
             </p>
           </div>
 
+          {/* Status Messages */}
+          {submitStatus === 'success' && (
+            <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-md">
+              <strong>Thank you for your request!</strong> 
+              <p className="mt-2">Our team will contact you at {formData.email} within 24 hours.</p>
+            </div>
+          )}
+
+          {submitStatus === 'error' && (
+            <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-md">
+              <strong>Oops! Something went wrong.</strong>
+              <p className="mt-2">There was an error submitting your form. Please try again or contact us directly at info@bluevoltmarine.com</p>
+            </div>
+          )}
+
           <form onSubmit={handleSubmit} className="bg-navy-50 rounded-lg shadow-lg p-4.5 md:p-8">
             <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-8">
+              {/* Company Name */}
               <div>
                 <label htmlFor="companyName" className="block text-sm font-medium text-navy-700 mb-2">
                   Company Name *
@@ -62,6 +117,7 @@ export default function RequestForm() {
                 />
               </div>
 
+              {/* Contact Person */}
               <div>
                 <label htmlFor="contactPerson" className="block text-sm font-medium text-navy-700 mb-2">
                   Contact Person *
@@ -77,6 +133,7 @@ export default function RequestForm() {
                 />
               </div>
 
+              {/* Email */}
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-navy-700 mb-2">
                   Email *
@@ -92,6 +149,7 @@ export default function RequestForm() {
                 />
               </div>
 
+              {/* Phone */}
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium text-navy-700 mb-2">
                   Phone *
@@ -107,6 +165,7 @@ export default function RequestForm() {
                 />
               </div>
 
+              {/* Service Type */}
               <div>
                 <label htmlFor="serviceType" className="block text-sm font-medium text-navy-700 mb-2">
                   Service Type *
@@ -126,6 +185,7 @@ export default function RequestForm() {
                 </select>
               </div>
 
+              {/* Vessel Type */}
               <div>
                 <label htmlFor="vesselType" className="block text-sm font-medium text-navy-700 mb-2">
                   Vessel Type / Scope
@@ -141,6 +201,7 @@ export default function RequestForm() {
                 />
               </div>
 
+              {/* Location */}
               <div>
                 <label htmlFor="location" className="block text-sm font-medium text-navy-700 mb-2">
                   Location / Port
@@ -156,6 +217,7 @@ export default function RequestForm() {
                 />
               </div>
 
+              {/* Timeline */}
               <div>
                 <label htmlFor="timeline" className="block text-sm font-medium text-navy-700 mb-2">
                   Timeline
@@ -172,6 +234,7 @@ export default function RequestForm() {
               </div>
             </div>
 
+            {/* Message */}
             <div className="mb-8">
               <label htmlFor="message" className="block text-sm font-medium text-navy-700 mb-2">
                 Additional Details / Requirements
@@ -187,12 +250,22 @@ export default function RequestForm() {
               ></textarea>
             </div>
 
+            {/* Submit Button */}
             <div className="text-center">
               <button
                 type="submit"
-                className="btn-primary px-12 py-4 text-lg"
+                disabled={isSubmitting}
+                className={`btn-primary px-12 py-4 text-lg ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
-                Submit Request
+                {isSubmitting ? (
+                  <span className="flex items-center justify-center">
+                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Submitting...
+                  </span>
+                ) : 'Submit Request'}
               </button>
               <p className="text-sm text-navy-600 mt-4">
                 Our team will contact you within 24 hours to discuss your requirements.
@@ -204,3 +277,5 @@ export default function RequestForm() {
     </section>
   )
 }
+
+export default RequestForm;
