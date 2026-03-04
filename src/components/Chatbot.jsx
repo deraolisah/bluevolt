@@ -3,7 +3,7 @@ import whatsapp from "../assets/whatsapp-icon.svg";
 
 const Chatbot = () => {
   return (
-    <a href='https://wa.me/' target='_blank' className='fixed bottom-4 md:bottom-6.5 right-4 md:right-6 z-80 cursor-pointer'>
+    <a href='https://wa.me/13828857447' target='_blank' className='fixed bottom-4 md:bottom-6.5 right-4 md:right-6 z-80 cursor-pointer'>
       <img src={whatsapp} alt="" className='w-12 md:w-14' />
     </a>
   )

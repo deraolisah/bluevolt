@@ -13,7 +13,9 @@ export default function Footer() {
             </h3>
             
             <p className="text-navy-300 text-sm leading-loose md:leading-normal">
-              BlueVoltMarine is a brokerage-first maritime services company built from the deck plate up by experienced maritime officers. We combine commercial vessel sourcing with practical maritime judgement and technical readiness awareness, so clients receive assets that are fit-for-purpose and prepared for safe, reliable operations.
+              BlueVoltMarine is a brokerage-first maritime services company built from the deck-plate up, by experienced maritime officers. 
+              <br/><br/>
+              We combine commercial vessel sourcing with practical maritime judgement and technical readiness awareness, so clients receive assets that are fit-for-purpose and prepared for safe, reliable operations.
             </p>
 
             {/* <p className="text-navy-200 mb-6">

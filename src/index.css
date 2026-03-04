@@ -10,7 +10,10 @@
   /* --font-display: 'Barlow', system-ui, sans-serif; */
 
   /* --color-primary: #012E71; */
-  --color-primary: #243b53;
+  /* --color-primary: #243b53; */
+  --color-primary: #0B3D5F;
+  
+  /* --color-primary: #07082C; */
 
 
   --color-navy-50: #f0f4f8;
@@ -57,7 +60,7 @@
   }
   
   .btn-secondary {
-    @apply bg-white text-primary border border-navy-300 px-6 py-2 rounded-full font-medium hover:scale-[1.008] transition-all duration-200 focus:outline-none overflow-hidden;
+    @apply bg-white text-primary border border-gray-200 px-6 py-2 rounded-full font-medium hover:scale-[1.008] transition-all duration-200 focus:outline-none overflow-hidden shadow;
   }
   
   .section-container {
