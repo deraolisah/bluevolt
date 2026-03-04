@@ -4,8 +4,8 @@ export default function VesselBrokerage() {
     'AHTS (Anchor Handling Tug Supply)',
     'MPSV (Multi-Purpose Support Vessel)',
     'Crew Boats',
-    'Survey Vessels',
-    'Standby Safety Vessels',
+    'Security Vessels',
+    // 'Standby Safety Vessels',
     'ROV Support Vessels',
     'Drilling Rigs',
   ]
@@ -56,7 +56,7 @@ export default function VesselBrokerage() {
             </div>
             <div className="mt-8 p-4 bg-accent-blue/5 rounded border border-accent-blue/20">
               <p className="text-navy-700">
-                <span className="font-semibold">Note:</span> Please specify vessel type, operational area, duration.
+                <span className="font-semibold">Note:</span> Please specify vessel type, and location (operational area), when making request.
               </p>
             </div>
           </div>

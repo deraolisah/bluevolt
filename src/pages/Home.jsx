@@ -39,7 +39,8 @@ const Home = () => {
 
 
 
-      <Team />
+      {/* <Team /> */}
+      
       <WhoWeServe />
       <VesselBrokerage />
       {/* <Testimonials /> */}
