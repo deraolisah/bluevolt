@@ -1,4 +1,5 @@
 // import Lloyd from "../assets/Lloyd.jpeg";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -27,22 +28,15 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-lg mb-6"> Quick Links </h4>
-            <ul className="fex flex-col items-start space-y-2 text-navy-200 text-sm">
-              <li> Home </li>
-              <li> About Us </li>
-              <li> Services </li>
-              <li> Contact Us </li>
-            </ul>
-          </div>
-
-          <div>
             <h4 className="font-display font-semibold text-lg mb-6">
-              Company
+              Support
             </h4>
             <div className="space-y-2 text-navy-200 text-sm">
-              <p>
+              {/* <p>
                 <span className="font-bold"> Phone: </span> 
+              </p> */}
+              <p>
+                <span className="font-bold"> Office Phone: +234(0)20-1330-1258.  </span> 
               </p>
               <p>
                 <span className="font-bold"> Email: </span> 
@@ -58,12 +52,27 @@ export default function Footer() {
             </div>
           </div>
 
+          <div>
+            <h4 className="font-semibold text-lg mb-6"> Company </h4>
+            <ul className="flex flex-col items-start space-y-2 text-navy-200 text-sm">
+              {/* <Link to="/"> Home </Link> */}
+              <Link to="/about"> About Us </Link>
+              <Link to="/careers"> Careers </Link>
+              <Link to="/services"> Services </Link>
+              <Link to="/faqs"> FAQs </Link>
+              <Link to="/blog"> Blog </Link>
+              <Link to="/contact"> Contact Us </Link>
+              {/* <Link to="/contact"> Blog </Link> */}
+            </ul>
+          </div>
+
 
           <div>
             <h4 className="font-semibold text-lg mb-6"> Legal </h4>
             <ul className="flex flex-col items-start space-y-2 text-navy-200 text-sm">
-              <li> Terms of Service </li>
-              <li> Privacy Policies </li>
+              <Link to="/terms"> Terms of Service </Link>
+              <Link to="/privacy"> Privacy Policies </Link>
+              <Link to="/resources"> Resources </Link>
             </ul>
           </div>
         </div>
@@ -72,7 +81,7 @@ export default function Footer() {
 
         <div className="text-center text-navy-400 space-y-4">
           <p>
-            © {currentYear} Bluevolt Marine. All rights reserved.
+            © {currentYear} BlueVoltMarine. All rights reserved.
           </p>
           <p className="">
             Vessel Brokerage Powered by Field Experience.

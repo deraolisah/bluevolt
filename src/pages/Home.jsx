@@ -11,7 +11,7 @@ import Partners from '../components/home/Partners';
 import Team from '../components/home/Team';
 import WhoWeServe from '../components/home/WhoWeServe';
 import VesselBrokerage from '../components/home/VesselBrokerage';
-// import Testimonials from '../components/home/Testimonials';
+import Testimonials from '../components/home/Testimonials';
 import RequestForm from '../components/home/RequestForm';
 import { useLocation } from 'react-router-dom';
 
@@ -43,7 +43,7 @@ const Home = () => {
       
       <WhoWeServe />
       <VesselBrokerage />
-      {/* <Testimonials /> */}
+      <Testimonials />
       <RequestForm />
     </>
   )

@@ -141,10 +141,10 @@ const Contact = () => {
                   Office
                 </h3>
                 <p className="text-gray-900 text-sm font-medium">
-                  1500 Commerce Street, Suite 720,
+                  6th Floor, No 1 Akin Adesola Street, 
                 </p>
-                <p className="text-gray-600 text-sm">
-                  {/* Dallas TX 75201, United States */}
+                <p className="text-gray-900 text-sm font-medium">
+                  Victoria Island, Lagos Nigeria. 101241
                 </p>
               </div>
             </div>

@@ -9,12 +9,17 @@ import Home from "../pages/Home.jsx";
 import About from "../pages/About.jsx";
 import Contact from "../pages/Contact.jsx";
 import Services from "../pages/Services.jsx";
+import NotFound from "../pages/NotFound.jsx";
 
 function AppRoutes() {
+
+  const isHome = ['/', '/home', '/index'].includes(location.pathname);
+
+
   return (
     <div className="min-h-screen flex flex-col justify-between font-body overflow-x-hidden bg-white text-primary relative">
       {/* <UnderConstruction /> */}
-      <Header />
+      <Header isHome={isHome} />
       <Chatbot />
       <Routes>
         <Route index path="/" element={<Home />} />
@@ -22,7 +27,7 @@ function AppRoutes() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />
 
-        <Route path="*" element={<div> Page Not Found </div>} />
+        <Route path="*" element={<NotFound />} />
       </Routes>        
       <Footer />
     </div>
