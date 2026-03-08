@@ -55,11 +55,15 @@ export default function WhyChooseUs() {
                 <img src={feature01} alt="" className="w-full h-[60%] rounded-lg object-cover" />
                 <div className="flex flex-col items-start justify-between gap-2 h-full">
                   <h3 className="font-semibold text-xl leading-tight"> 
-                    Every survey conducted by certified maritime officers with actual offshore command experience. 
+                    {/* Every survey conducted by certified maritime officers with actual offshore command experience.  */}
+                    Backed by experienced maritime Officers
                   </h3>
-                  <button className="btn-primary">
+                  <p>
+                    We are backed by experienced maritime officers, certified ETOs with extensive maritime exposure, bringing practical vessel knowledge, technical depth, and commercial understanding to every engagement.
+                  </p>
+                  {/* <button className="btn-primary">
                     Explore Our Services
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </StaggerItem>

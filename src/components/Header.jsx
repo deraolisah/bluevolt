@@ -3,6 +3,8 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from "../assets/logo.jpeg";
 
+import grid from "../assets/grid.png";
+
 const Header = ({ isHome }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [header, setHeader] = useState(false);
@@ -93,10 +95,14 @@ const Header = ({ isHome }) => {
   }, [isMenuOpen]);
 
   useEffect(() => {
+    // Sticky Header
     const handleScroll = () => {
       if (isHome) {
         window.scrollY > 50 ? setHeader(true) : setHeader(false);
-      }
+      } else {
+        return;
+      } 
+      return;
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -179,7 +185,7 @@ const Header = ({ isHome }) => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={() => { setIsMenuOpen(!isMenuOpen);  }}
             className="z-50 inline-flex items-center justify-center bg-white text-primary px-2 py-2 rounded-full focus:outline-none cursor-pointer shadow border border-gray-200 hover:shadow-lg transition-shadow duration-300"
             aria-label="Toggle menu"
           >
@@ -229,6 +235,7 @@ const Header = ({ isHome }) => {
             exit="closed"
             className="fixed top-0 left-0 w-full h-full bg-white z-40 flex flex-col items-center justify-center overflow-hidden"
           >
+            <img src={grid} alt='' className='fixed w-full h-full' />
             {/* Decorative background elements */}
             <motion.div
               className="absolute inset-0 opacity-5"

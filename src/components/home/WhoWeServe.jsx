@@ -24,7 +24,7 @@ export default function WhoWeServe() {
               {industries.map((industry, index) => (
                 <StaggerItem key={index} direction="up">
                   <div 
-                    className="bg-primary/5 rounded-sm p-2 sm:p-4 text-center hover:bg-navy-100 transition-colors duration-200 border border-navy-200"
+                    className="bg-primary/5 rounded-sm p-2 sm:p-4 text-center hover:bg-navy-100 transition-colors duration-200 border border-navy-200 h-full"
                   >
                     <div className="font-normal text-start text-sm sm:text-base">
                       {industry}

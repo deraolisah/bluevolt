@@ -2,24 +2,29 @@ import React from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useCallback, useEffect, useState } from 'react';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '../animations/ScrollReveal';
-import psv from "../../assets/PSV.jpeg";
-import securityVessel from "../../assets/SECURITY-VESSEL.png";
-import crewBoat from "../../assets/crew-boat.jpg";
-import mpsv from "../../assets/MPSV.png";
+
+import Psv from "../../assets/PSV.jpeg";
+import Ahts from "../../assets/catalogue/Ahts.png";
+import Mpsv from "../../assets/catalogue/Mpsv.jpeg";
+import SecurityVessel from "../../assets/catalogue/Security-Vessel.png";
+import CrewBoat from "../../assets/catalogue/Crew-Boat.png";
+import OilTanker from "../../assets/catalogue/Oil-Tanker.png";
+import Rov from "../../assets/catalogue/ROV.png";
 
 const OurCatalogue = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState([]);
   
+
   const catalogue = [
-    { name: "PSV (Platform Supply Vessel)", description: "Platform Supply Vessels are used for supplying offshore platforms with personnel, equipment, and supplies.", image: psv },
-    { name: "AHTS (Anchor Handling Tug Supply)", description: "Anchor Handling Tug Supply vessels are designed for towing and handling anchors for offshore platforms.", image: "" },
-    { name: "MPSV (Multi-Purpose Support Vessel)", description: "Multi-Purpose Support Vessels are versatile ships designed for various offshore support tasks.", image: mpsv },
-    { name: "Security Vessels", description: "Security vessels provide protection and surveillance for offshore installations and operations.", image: securityVessel },
-    { name: "Oil Tankers", description: "Oil tankers are ships designed for the bulk transport of oil and its derivatives.", image: "" },
-    { name: "Crew Transfer Vessels", description: "Crew Transfer Vessels are used for transporting personnel to and from offshore platforms.", image: crewBoat },
+    { name: "PSV (Platform Supply Vessel)", description: "Platform Supply Vessels are used for supplying offshore platforms with personnel, equipment, and supplies.", image: Psv },
+    { name: "AHTS (Anchor Handling Tug Supply)", description: "Anchor Handling Tug Supply vessels are designed for towing and handling anchors for offshore platforms.", image: Ahts },
+    { name: "MPSV (Multi-Purpose Support Vessel)", description: "Multi-Purpose Support Vessels are versatile ships designed for various offshore support tasks.", image: Mpsv },
+    { name: "Security Vessels", description: "Security vessels provide protection and surveillance for offshore installations and operations.", image: SecurityVessel },
+    { name: "Oil Tankers", description: "Oil tankers are ships designed for the bulk transport of oil and its derivatives.", image: OilTanker },
+    { name: "Crew Transfer Vessels", description: "Crew Transfer Vessels are used for transporting personnel to and from offshore platforms.", image: CrewBoat },
     { name: "Diving Support Vessels", description: "Diving Support Vessels provide support for diving operations, including decompression chambers.", image: "" },
-    { name: "ROV Support Vessels", description: "Remote Operated Vehicles Support Vessels are equipped to support remotely operated vehicles for underwater inspections.", image: "" },
+    { name: "ROV Support Vessels", description: "Remote Operated Vehicles Support Vessels are equipped to support remotely operated vehicles for underwater inspections.", image: Rov },
   ];
 
   const [slidesToShow, setSlidesToShow] = useState(4);

@@ -54,7 +54,7 @@ export default function VesselBrokerage() {
                     {vesselTypes.map((type, index) => (
                       <StaggerItem key={index} direction="up">
                         <div 
-                          className="flex items-center p-3 bg-navy-50 rounded border border-navy-200"
+                          className="flex items-center p-3 bg-navy-50 rounded border border-navy-200 h-full"
                         >
                           <div className="w-2 h-2 bg-accent-blue rounded-full mr-3"></div>
                           <span className="text-navy-700">{type}</span>

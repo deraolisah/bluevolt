@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import curve from "../../assets/curve.png";
+// import curve from "../../assets/curve.png";
 import hero1 from "../../assets/hero/HeroBg.png";
 import hero2 from "../../assets/hero/slide-02.jpg";
 import hero3 from "../../assets/hero/slide-03.jpg";

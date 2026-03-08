@@ -55,12 +55,12 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-lg mb-6"> Company </h4>
             <ul className="flex flex-col items-start space-y-2 text-navy-200 text-sm">
-              {/* <Link to="/"> Home </Link> */}
+              <Link to="/"> Home </Link>
               <Link to="/about"> About Us </Link>
-              <Link to="/careers"> Careers </Link>
+              {/* <Link to="/careers"> Careers </Link> */}
               <Link to="/services"> Services </Link>
-              <Link to="/faqs"> FAQs </Link>
-              <Link to="/blog"> Blog </Link>
+              {/* <Link to="/faqs"> FAQs </Link> */}
+              {/* <Link to="/blog"> Blog </Link> */}
               <Link to="/contact"> Contact Us </Link>
               {/* <Link to="/contact"> Blog </Link> */}
             </ul>
