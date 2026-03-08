@@ -87,7 +87,7 @@ const Hero = () => {
           Experienced Maritime Officers
         </motion.h1>
 
-        <motion.p
+        {/* <motion.p
           variants={{
             hidden: { opacity: 0, y: 50 },
             visible: { 
@@ -99,7 +99,7 @@ const Hero = () => {
           className="text-lg md:text-xl text-left max-w-2xl"
         >
           Professional maritime services tailored to your needs
-        </motion.p>
+        </motion.p> */}
       </motion.div>
 
       <div className="h-full w-full mx-auto relative">

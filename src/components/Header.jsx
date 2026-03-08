@@ -142,7 +142,7 @@ const Header = ({ isHome }) => {
     <header
       className={`${
         header
-          ? 'bg-white text-primary shadow-md py-3'
+          ? 'bg-white text-primary shadow-md py-2'
           : 'text-white bg-transparent py-6'
       } ${isHome ? 'fixed' : 'relative'} z-150 w-full transition-all duration-500`}
     >
@@ -160,7 +160,7 @@ const Header = ({ isHome }) => {
             <img 
               src={logo} 
               alt='BlueVoltMarine' 
-              className='rounded-full h-11 w-11 object-cover object-center'
+              className='rounded-full h-10 w-10 object-cover object-center'
             />
             <span>BlueVoltMarine</span>
           </Link>

@@ -4,6 +4,8 @@ import feature02 from "../../assets/feature/feature-02.avif";
 import feature03 from "../../assets/feature/feature-03.avif";
 import feature04 from "../../assets/feature/feature-04.avif";
 
+import { TextQuote, CalendarSync, SquareLibrary, Fullscreen } from "lucide-react";
+
 export default function WhyChooseUs() {
   const features = [
     {
@@ -13,25 +15,25 @@ export default function WhyChooseUs() {
         'Every survey conducted by certified maritime officers with actual offshore command experience.',
     },
     {
-      icon: feature02,
+      icon: <TextQuote />,
       title: 'Independent Assessments',
       description:
         'Unbiased evaluations with no conflicts of interest. Our findings are based solely on technical merit.',
     },
     {
-      icon: feature03,
+      icon: <CalendarSync />,
       title: 'Fast, Accurate Reporting',
       description:
         'Detailed reports delivered within agreed timelines, with clear findings and actionable recommendations.',
     },
     {
-      icon: feature04,
+      icon: <SquareLibrary />,
       title: 'Practical Recommendations',
       description:
         'Operationally focused advice that considers both technical requirements and commercial realities.',
     },
     {
-      icon: feature04,
+      icon: <Fullscreen />,
       title: 'Field Experienced',
       description:
         'Operationally focused advice that considers both technical requirements and commercial realities.',
@@ -98,9 +100,13 @@ function FeatureCard({ feature }) {
   return (
     <div className="bg-primary/5 rounded-md p-4 md:p-6 card-hover border border-navy-200 h-full">
       {feature.icon && (
-        <div className="w-full h-12 bg-accent-blue/10 rounded-full flex items-center justify-center mb-4">
-          <img src={feature.icon} alt="" className="w-8 h-8 ml-2 mr-auto rounded-full text-accent-blue" />
-        </div>
+        // <div className="w-full bg-accent-blue/10 rounded-full flex items-center justify-center mb-4">
+          // <img src={feature.icon} alt="" className="w-14 h-14 rounded-md mb-2 text-accent-blue" />
+          // <TextQuote />
+          <span className='bg-primary/20 p-3 w-fit rounded-md flex items-center justify-center mb-2'>
+            {feature.icon}
+          </span>
+        // </div>
       )}
       <h3 className="font-display font-semibold text-primary text-lg mb-3">
         {feature.title}

@@ -36,7 +36,7 @@ export default function VesselBrokerage() {
               </ScrollReveal>
               <ScrollReveal direction="up" delay={0.5}>
                 <a
-                  href="#contact"
+                  href="#request"
                   className="btn-primary inline-flex items-center"
                 >
                   Request A Vessel
