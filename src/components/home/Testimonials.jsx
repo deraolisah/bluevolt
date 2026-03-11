@@ -18,7 +18,7 @@ export default function Testimonials() {
     <section className="bg-white">
       <div className="container">
         <div className="text-center">
-          <h2 className="section-title leading-tight">  Our Foundation" <br/> A 100% Nigerian owned Emerging company, </h2>
+          <h2 className="section-title leading-normal">  Our Foundation <br/> A 100% Nigerian owned Emerging company, </h2>
           {/* <p className="section-subtitle">
             Trusted by technical managers and marine superintendents in the offshore industry.
           </p> */}

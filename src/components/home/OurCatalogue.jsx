@@ -23,7 +23,7 @@ const OurCatalogue = () => {
     { name: "Security Vessels", description: "Security vessels provide protection and surveillance for offshore installations and operations.", image: SecurityVessel },
     { name: "Oil Tankers", description: "Oil tankers are ships designed for the bulk transport of oil and its derivatives.", image: OilTanker },
     { name: "Crew Transfer Vessels", description: "Crew Transfer Vessels are used for transporting personnel to and from offshore platforms.", image: CrewBoat },
-    { name: "Diving Support Vessels", description: "Diving Support Vessels provide support for diving operations, including decompression chambers.", image: "" },
+    // { name: "Diving Support Vessels", description: "Diving Support Vessels provide support for diving operations, including decompression chambers.", image: "" },
     { name: "ROV Support Vessels", description: "Remote Operated Vehicles Support Vessels are equipped to support remotely operated vehicles for underwater inspections.", image: Rov },
   ];
 
@@ -105,8 +105,8 @@ const OurCatalogue = () => {
                       className="w-full h-40 object-cover rounded-sm bg-gray-300" 
                       draggable="false"
                     />
-                    <h4 className="text-base md:text-lg font-semibold line-clamp-2">{item.name}</h4>
-                    <p className="text-sm text-navy-500 line-clamp-2">{item.description}</p>
+                    <h4 className="text-base md:text-lg font-semibold line-clamp-1" title={item.name}>{item.name}</h4>
+                    <p className="text-sm text-navy-500">{item.description}</p>
                   </div>
                 </ScrollReveal>
               ))}

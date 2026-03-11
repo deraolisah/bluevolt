@@ -36,19 +36,20 @@ export default function Footer() {
                 <span className="font-bold"> Phone: </span> 
               </p> */}
               <p>
-                <span className="font-bold"> Office Phone: +234(0)20-1330-1258.  </span> 
+                <span className="font-bold"> Phone: </span>
+                <a href="tel:+234(0)20-1330-1258"> +234(0)20-1330-1258 </a>
               </p>
               <p>
                 <span className="font-bold"> Email: </span> 
-                info@bluevoltmarine.com
+                <a href="mailto:info@bluevoltmarine.com"> info@bluevoltmarine.com </a>
               </p>
               <p>
                 <span className="font-bold"> Address: </span> 
                 6th Floor, No 1 Akin Adesola Street, Victoria Island, Lagos Nigeria. 101241
               </p>
-              <p>
-                <span className="font-bold">Services:</span> Nation-Wide
-              </p>
+              {/* <p>
+                <span className="font-bold">Services:</span> World-Wide
+              </p> */}
             </div>
           </div>
 
