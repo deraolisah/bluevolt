@@ -41,27 +41,23 @@ const Olamide = () => {
 
   return (
     <div className="w-full bg-[#080A29] top-0 z-5000 relative">
-        <div className="w-full h-full max-w-110 mx-auto bg-[#080A29] flex flex-col py-14 px-8 shadow-white relative z-10">
+        <div className="w-full h-full max-w-110 mx-auto bg-[#080A29] flex flex-col py-14 px-5.5 md:px-8 shadow-white relative z-10">
 
-            <div className="mark flex items-center gap-1.5">
-                {/* <div className="ring w-7 h-7 rounded-full border-2 border-[#6EC8A1]"></div> */}
-                <Link 
-                    to="/" 
-                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
-                    className="z-50 text-base md:text-xl tracking-normal font-medium flex items-center justify-start h-fit gap-2"
-                >
-                    <img 
-                    src={logo} 
-                    alt='BlueVoltMarine' 
-                    className='rounded-full h-10 w-10 object-cover object-center'
-                    />
-                    {/* <span>BlueVoltMarine</span> */}
-                </Link>
+            <Link 
+                to="/" 
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
+                className="z-50 text-base md:text-xl tracking-normal font-medium flex items-center justify-start h-fit gap-2"
+            >
+                <img 
+                src={logo} 
+                alt='BlueVoltMarine' 
+                className='rounded-full h-10 w-10 object-cover object-center'
+                />
                 <div>
                     <div className="wordmark text-white tracking-wider font-extrabold leading-tight">BLUEVOLTMARINE</div>
                     <div className="lede text-xs text-[#6EC8A1] tracking-wider font-medium">RIGHT VESSEL. TECHNICAL READINESS.</div>
                 </div>
-            </div>
+            </Link>
 
             <div className="my-12">
                 <h1 className="text-2xl md:text-4xl text-white font-bold tracking-wide"> 
@@ -95,7 +91,7 @@ const Olamide = () => {
 
             <hr className="w-full h-px border-0 bg-white/20 mt-8 mb-6 flex" />
 
-            <div className="text-sm text-[#7C879F] leading-loose font-mono space-y-1">
+            <div className="text-sm text-[#7C879F] leading-normal font-mono space-y-2">
                 <a href="tel:2348181327447" target="_blank" className="flex items-center gap-2">
                     <Phone size={14} />
                     +234 818 132 7447
