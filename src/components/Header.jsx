@@ -140,11 +140,11 @@ const Header = ({ isHome }) => {
 
   return (
     <header
-      className={`${
+      className={` fixed ${
         header
           ? 'bg-white text-primary shadow-md py-2'
-          : 'text-white bg-transparent py-6'
-      } ${isHome ? 'fixed' : 'relative'} z-150 w-full transition-all duration-500`}
+          : 'text-primary bg-white py-5'
+      } z-150 w-full transition-all duration-500`}
     >
       <div className="container flex justify-between items-center py-0!">
         <motion.div

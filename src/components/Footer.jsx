@@ -73,7 +73,7 @@ export default function Footer() {
             <ul className="flex flex-col items-start space-y-2 text-navy-200 text-sm">
               <Link to="/terms"> Terms of Service </Link>
               <Link to="/privacy"> Privacy Policies </Link>
-              <Link to="/resources"> Resources </Link>
+              <Link onClick={()=> {scrollTo(0,0); }} to="/olamide"> Resources </Link>
             </ul>
           </div>
         </div>

@@ -23,7 +23,7 @@ export default function TrustStrip() {
   return (
     <ScrollReveal direction="up" delay={0.2}>
       <section className="container py-8! text-primary">
-        <div className="overflow-x-auto grid grid-cols-2 lg:grid-cols-4 gap-px bg-navy-200">
+        <div className="overflow-x-auto overflow-y-hidden grid grid-cols-2 lg:grid-cols-4 gap-px bg-navy-200">
           {credentials.map((credential, index) => (
             <ScrollReveal 
               key={index} 
